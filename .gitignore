@@ -143,3 +143,7 @@ msvc/dallar-common/Intermediate/
 msvc/dallar-qt/Intermediate/
 
 msvc/dallard/Intermediate/
+
+*.opendb
+
+msvc/packages/

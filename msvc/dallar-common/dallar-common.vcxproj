@@ -208,7 +208,6 @@
     <ClCompile Include="..\..\src\dbwrapper.cpp" />
     <ClCompile Include="..\..\src\groestlcoin-hash.cpp" />
     <ClCompile Include="..\..\src\groestlcoin.cpp" />
-    <ClCompile Include="..\..\src\groestlcoind.cpp" />
     <ClCompile Include="..\..\src\hash.cpp" />
     <ClCompile Include="..\..\src\httprpc.cpp" />
     <ClCompile Include="..\..\src\httpserver.cpp" />
