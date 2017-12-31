@@ -154,3 +154,9 @@ src/config/bitcoin-config\.h
 src/config/bitcoin-config\.h\.in
 
 libdallarconsensus\.pc
+
+src/dallar-cli
+
+src/dallard
+
+src/dallar-tx
