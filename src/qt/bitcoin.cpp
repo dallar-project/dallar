@@ -39,6 +39,7 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/thread.hpp>
 
+#include <QtGlobal>
 #include <QApplication>
 #include <QDebug>
 #include <QLibraryInfo>
@@ -60,7 +61,8 @@ Q_IMPORT_PLUGIN(qkrcodecs)
 Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 #else
 #if QT_VERSION < 0x050400
-Q_IMPORT_PLUGIN(AccessibleFactory)
+//Q_IMPORT_PLUGIN(AccessibleFactory)
+//why the fuck is this happening on linux
 #endif
 #if defined(QT_QPA_PLATFORM_XCB)
 Q_IMPORT_PLUGIN(QXcbIntegrationPlugin);
