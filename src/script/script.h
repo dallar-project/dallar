@@ -6,6 +6,8 @@
 #ifndef BITCOIN_SCRIPT_SCRIPT_H
 #define BITCOIN_SCRIPT_SCRIPT_H
 
+#include "clientversion.h"
+
 #include "crypto/common.h"
 #include "prevector.h"
 

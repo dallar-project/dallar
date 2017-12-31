@@ -135,3 +135,11 @@ x64_libs
 x86_D_St
 x86_R_St
 x86_libs
+
+msvc/dallar-cli/Intermediate/
+
+msvc/dallar-common/Intermediate/
+
+msvc/dallar-qt/Intermediate/
+
+msvc/dallard/Intermediate/

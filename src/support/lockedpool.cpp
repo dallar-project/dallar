@@ -5,9 +5,7 @@
 #include "support/lockedpool.h"
 #include "support/cleanse.h"
 
-#if defined(HAVE_CONFIG_H)
-#include "config/bitcoin-config.h"
-#endif
+#include "clientversion.h"
 
 #ifdef WIN32
 #ifdef _WIN32_WINNT

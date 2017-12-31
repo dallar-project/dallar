@@ -5,39 +5,55 @@
 #ifndef BITCOIN_CLIENTVERSION_H
 #define BITCOIN_CLIENTVERSION_H
 
-#if defined(HAVE_CONFIG_H)
-#	ifdef _WIN32
-#		include "grs-config.h"
-#	else
-#		include "config/bitcoin-config.h"
-#	endif
-#else
+#define UCFG_DEFINE_NDEBUG 0
 
-/**
- * client versioning and copyright year
- */
+#define UCFG_GRS_FAST 1	//!!!T
 
-//! These need to be macros, as clientversion.cpp's and bitcoin*-res.rc's voodoo requires it
-#define CLIENT_VERSION_MAJOR 2
-#define CLIENT_VERSION_MINOR 13
-#define CLIENT_VERSION_REVISION 3
+#define CLIENT_VERSION_MAJOR 1
+#define CLIENT_VERSION_MINOR 0
+#define CLIENT_VERSION_REVISION 0
 #define CLIENT_VERSION_BUILD 0
 
+#define BUILD_DESC "v1.0.0"
+
+#define COPYRIGHT_HOLDERS "The %s developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Dallar Core developers"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Dallar Core"
+
+#define COPYRIGHT_YEAR 2017
+
+#if  !defined(RC_COMPILER) && defined(_MSC_VER)
+#include <vc-inc.h>
+#endif
+
+// Apparently RC Compiling for QT on MSVC doesn't define _MSC_VER?
+#if !defined(_MSC_VER) && !defined(QT_RES_SHIT)
+#include "config/bitcoin-config.h"
+#undef PACKAGE_NAME
+#undef PACKAGE_STRING
+#undef PACKAGE_URL
+#undef PACKAGE_VERSION
+#endif
+
+#define PACKAGE_NAME "Dallar Core"
+#define PACKAGE_STRING "Dallar Core 1.0.0"
+#define PACKAGE_URL "www.dallar.org"
+#define PACKAGE_VERSION "1.0.0"
+
+#ifdef _MSC_VER
+#pragma warning(disable: 4005 4503 4018 4101 4146 4242 4244 4267 4290 4334 4717 4789 4800 4804)
+#endif
 
 //! Set to true for release, false for prerelease or test build
 #define CLIENT_VERSION_IS_RELEASE true
 
-/**
- * Copyright year (2009-this)
- * Todo: update this when changing our copyright comments in the source
- */
-#define COPYRIGHT_YEAR 2017
+// Check that required client information is defined
+#if !defined(CLIENT_VERSION_MAJOR) || !defined(CLIENT_VERSION_MINOR) || !defined(CLIENT_VERSION_REVISION) || !defined(CLIENT_VERSION_BUILD) || !defined(CLIENT_VERSION_IS_RELEASE) || !defined(COPYRIGHT_YEAR)
+#error Client version information missing: version is not defined by bitcoin-config.h or in any other way
+#endif
 
-#define COPYRIGHT_HOLDERS_FINAL "The Groestlcoin Core developers" //!!!P
+#define QT_STATICPLUGIN true
 
-#endif //HAVE_CONFIG_H
-
-#define BUILD_DESC "v2.13.3"
 
 /**
  * Converts the parameter X to a string after macro replacement on X has been performed.
@@ -47,7 +63,7 @@
 #define DO_STRINGIZE(X) #X
 
 //! Copyright string used in Windows .rc files
-#define COPYRIGHT_STR "2014-" STRINGIZE(COPYRIGHT_YEAR) " " COPYRIGHT_HOLDERS_FINAL
+#define COPYRIGHT_STR "2017-" STRINGIZE(COPYRIGHT_YEAR) " " COPYRIGHT_HOLDERS_FINAL
 
 /**
  * groestlcoind-res.rc includes this file, but it cannot cope with real c++ code.

@@ -5,6 +5,8 @@
 #ifndef BITCOIN_QT_WINSHUTDOWNMONITOR_H
 #define BITCOIN_QT_WINSHUTDOWNMONITOR_H
 
+#include "clientversion.h"
+
 #ifdef WIN32
 #include <QByteArray>
 #include <QString>
