@@ -5,7 +5,7 @@
 DIST_SUBDIRS = secp256k1 univalue
 
 AM_LDFLAGS = $(PTHREAD_CFLAGS) $(LIBTOOL_LDFLAGS) $(HARDENED_LDFLAGS)
-AM_CXXFLAGS = $(HARDENED_CXXFLAGS)
+AM_CXXFLAGS = $(HARDENED_CXXFLAGS) $(ERROR_CXXFLAGS)
 AM_CPPFLAGS = $(HARDENED_CPPFLAGS)
 EXTRA_LIBRARIES =
 
@@ -18,29 +18,29 @@ else
 LIBUNIVALUE = $(UNIVALUE_LIBS)
 endif
 
-GROESTLCOIN_CONFIG_INCLUDES=-I$(builddir)/config
+DALLAR_CONFIG_INCLUDES=-I$(builddir)/config
 BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBBITCOIN_SERVER=libgroestlcoin_server.a
-LIBBITCOIN_COMMON=libgroestlcoin_common.a
-LIBBITCOIN_CONSENSUS=libgroestlcoin_consensus.a
-LIBBITCOIN_CLI=libgroestlcoin_cli.a
-LIBBITCOIN_UTIL=libgroestlcoin_util.a
-LIBBITCOIN_CRYPTO=crypto/libgroestlcoin_crypto.a
-LIBBITCOINQT=qt/libgroestlcoinqt.a
+LIBBITCOIN_SERVER=libdallar_server.a
+LIBBITCOIN_COMMON=libdallar_common.a
+LIBBITCOIN_CONSENSUS=libdallar_consensus.a
+LIBBITCOIN_CLI=libdallar_cli.a
+LIBBITCOIN_UTIL=libdallar_util.a
+LIBBITCOIN_CRYPTO=crypto/libdallar_crypto.a
+LIBBITCOINQT=qt/libdallarqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libgroestlcoin_zmq.a
+LIBBITCOIN_ZMQ=libdallar_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libgroestlcoinconsensus.la
+LIBBITCOINCONSENSUS=libdallarconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libgroestlcoin_wallet.a
+LIBBITCOIN_WALLET=libdallar_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += groestlcoind
+  bin_PROGRAMS += dallard
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += groestlcoin-cli groestlcoin-tx
+  bin_PROGRAMS += dallar-cli dallar-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -172,15 +172,14 @@ BITCOIN_CORE_H = \
 
 obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
-	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
-	  $(abs_top_srcdir)
-libgroestlcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
+	  "$(abs_top_srcdir)"
+libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between bitcoind and bitcoin-qt
-libgroestlcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libgroestlcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_server_a_SOURCES = \
-  addrman.cpp \
+libdallar_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libdallar_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_server_a_SOURCES = \
   addrdb.cpp \
   bloom.cpp \
   blockencodings.cpp \
@@ -218,9 +217,9 @@ libgroestlcoin_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libgroestlcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libgroestlcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_zmq_a_SOURCES = \
+libdallar_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libdallar_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
@@ -229,9 +228,9 @@ endif
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
 # when wallet enabled
-libgroestlcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libgroestlcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_wallet_a_SOURCES = \
+libdallar_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libdallar_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -242,9 +241,9 @@ libgroestlcoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libgroestlcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libgroestlcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libgroestlcoin_crypto_a_SOURCES = \
+crypto_libdallar_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
+crypto_libdallar_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libdallar_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -262,9 +261,9 @@ crypto_libgroestlcoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libgroestlcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libgroestlcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_consensus_a_SOURCES = \
+libdallar_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libdallar_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -299,10 +298,9 @@ libgroestlcoin_consensus_a_SOURCES = \
   version.h
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
-libgroestlcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libgroestlcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_common_a_SOURCES = \
-  amount.cpp \
+libdallar_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libdallar_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_common_a_SOURCES = \
   base58.cpp \
   groestlcoin.cpp \
   coins.cpp \
@@ -323,9 +321,9 @@ libgroestlcoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libgroestlcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libgroestlcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_util_a_SOURCES = \
+libdallar_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libdallar_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -344,30 +342,30 @@ libgroestlcoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libgroestlcoin_util_a_SOURCES += compat/glibc_compat.cpp
+libdallar_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between groestlcoin-cli and groestlcoin-qt
-libgroestlcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libgroestlcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libgroestlcoin_cli_a_SOURCES = \
+# cli: shared between dallar-cli and dallar-qt
+libdallar_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libdallar_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallar_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libgroestlcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libdallar_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-groestlcoind_SOURCES = groestlcoind.cpp
-groestlcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-groestlcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-groestlcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dallard_SOURCES = dallard.cpp
+dallard_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+dallard_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+dallard_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-groestlcoind_SOURCES += groestlcoind-res.rc
+dallard_SOURCES += dallard-res.rc
 endif
 
-groestlcoind_LDADD = \
+dallard_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -377,41 +375,42 @@ groestlcoind_LDADD = \
   $(LIBBITCOIN_CONSENSUS) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBLEVELDB) \
+  $(LIBLEVELDB_SSE42) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-groestlcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+dallard_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# groestlcoin-cli binary #
-groestlcoin_cli_SOURCES = groestlcoin-cli.cpp
-groestlcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-groestlcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-groestlcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# dallar-cli binary #
+dallar_cli_SOURCES = dallar-cli.cpp
+dallar_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+dallar_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+dallar_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-groestlcoin_cli_SOURCES += groestlcoin-cli-res.rc
+dallar_cli_SOURCES += dallar-cli-res.rc
 endif
 
-groestlcoin_cli_LDADD = \
+dallar_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-groestlcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+dallar_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# groestlcoin-tx binary #
-groestlcoin_tx_SOURCES = groestlcoin-tx.cpp
-groestlcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-groestlcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-groestlcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# dallar-tx binary #
+dallar_tx_SOURCES = dallar-tx.cpp
+dallar_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+dallar_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+dallar_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-groestlcoin_tx_SOURCES += groestlcoin-tx-res.rc
+dallar_tx_SOURCES += dallar-tx-res.rc
 endif
 
-groestlcoin_tx_LDADD = \
+dallar_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -419,22 +418,22 @@ groestlcoin_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-groestlcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+dallar_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/groestlcoinconsensus.h
-libgroestlcoinconsensus_la_SOURCES = $(crypto_libgroestlcoin_crypto_a_SOURCES) $(libgroestlcoin_consensus_a_SOURCES)
+libdallarconsensus_la_SOURCES = $(crypto_libdallar_crypto_a_SOURCES) $(libdallar_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libgroestlcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libdallarconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libgroestlcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libgroestlcoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libgroestlcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libgroestlcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdallarconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libdallarconsensus_la_LIBADD = $(LIBSECP256K1) $(BOOST_LIBS)
+libdallarconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libdallarconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -463,6 +462,14 @@ CLEANFILES += zmq/*.gcda zmq/*.gcno
 DISTCLEANFILES = obj/build.h
 
 EXTRA_DIST = $(CTAES_DIST)
+
+
+config/bitcoin-config.h: config/stamp-h1
+	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/bitcoin-config.h.in $(top_builddir)/config.status
+	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
+$(top_srcdir)/$(subdir)/config/bitcoin-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/bitcoin-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean

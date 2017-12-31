@@ -45,6 +45,8 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
+test/
+
 .deps
 .dirstamp
 .libs
@@ -146,3 +148,9 @@ msvc/dallard/Intermediate/
 *.opendb
 
 msvc/packages/
+
+src/config/bitcoin-config\.h
+
+src/config/bitcoin-config\.h\.in
+
+libdallarconsensus\.pc
