@@ -362,12 +362,12 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja groestlcoini: URId)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja dallari: URId)</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Ava groestlcoini: URI või maksepäring</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Ava dallari: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1770,7 +1770,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>

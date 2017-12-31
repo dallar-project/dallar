@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between groestlcoin-cli and groestlcoind)
+ * CBaseChainParams defines the base parameters (shared between dallar-cli and dallard)
  * of a given instance of the Bitcoin system.
  */
 class CBaseChainParams

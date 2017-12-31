@@ -238,16 +238,16 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et groestlcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et dallar: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Ouvrir un groestlcoin: URI ou demande de paiement</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Ouvrir un dallar: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1354,7 +1354,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Options :</translation>

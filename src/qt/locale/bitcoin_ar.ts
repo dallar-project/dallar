@@ -234,7 +234,7 @@
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
         <translation>أطلب دفعات (يولد كودات الرمز المربع وغرسلكوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -246,7 +246,7 @@
         <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
+        <source>Open a dallar: URI or payment request</source>
         <translation>فتح URI : Dallar أو طلب دفع</translation>
     </message>
     <message>
@@ -1137,7 +1137,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>خيارات: </translation>

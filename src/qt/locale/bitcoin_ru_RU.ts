@@ -216,14 +216,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Dallar Core</source>
         <translation>Dallar Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>groestlcoin-core</translation>
+        <translation>dallar-core</translation>
     </message>
     <message>
         <source>Information</source>

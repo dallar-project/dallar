@@ -238,7 +238,7 @@
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
         <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ Dallar: URLs)</translation>
     </message>
     <message>
@@ -250,8 +250,8 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Mở groestlcoin:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Mở dallar:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1002,7 +1002,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Lựa chọn:</translation>

@@ -218,12 +218,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un groestlcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un dallar: URIs)</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Atvērt groestlcoin URI vai maksājuma pieprasījumu</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Atvērt dallar URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -504,7 +504,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt groestlcoin &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt dallar &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
@@ -1100,7 +1100,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Iespējas:</translation>

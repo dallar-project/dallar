@@ -1,12 +1,12 @@
 *.tar.gz
 
 *.exe
-src/groestlcoin
-src/groestlcoind
-src/groestlcoin-cli
-src/groestlcoin-tx
-src/test/test_groestlcoin
-src/qt/test/test_groestlcoin-qt
+src/dallar
+src/dallard
+src/dallar-cli
+src/dallar-tx
+src/test/test_dallar
+src/qt/test/test_dallar-qt
 
 # autoreconf
 Makefile.in
@@ -29,8 +29,8 @@ config.log
 config.status
 configure
 libtool
-src/config/groestlcoin-config.h
-src/config/groestlcoin-config.h.in
+src/config/dallar-config.h
+src/config/dallar-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -58,7 +58,7 @@ test/
 *.pyc
 *.o
 *.o-*
-.groestlcoin
+.dallar
 *.a
 *.pb.cc
 *.pb.h
@@ -77,13 +77,13 @@ test/
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-groestlcoin-qt
+dallar-qt
 Groestlcoin-Qt.app
 Dallar-Qt.app
 
 # Unit-tests
 Makefile.test
-groestlcoin-qt_test
+dallar-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -161,3 +161,5 @@ src/dallar-cli
 src/dallard
 
 src/dallar-tx
+
+src/qt/groestlcoin-qt

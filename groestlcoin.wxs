@@ -21,13 +21,13 @@
 		<UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
 	</Upgrade>
 
-	<Icon Id="Dallar.ico" SourceFile="src\qt\res\icons\groestlcoin.ico " />
+	<Icon Id="Dallar.ico" SourceFile="src\qt\res\icons\dallar.ico " />
 
 	<Property Id="ARPPRODUCTICON" Value="Dallar.ico" />
 	<Property Id='DiskPrompt' Value="Dallar Core" />
-	<Property Id="ARPHELPLINK" Value="http://www.groestlcoin.org/downloads/" />
-	<Property Id="ARPURLINFOABOUT" Value="http://www.groestlcoin.org/downloads/" />
-	<Property Id="ARPURLUPDATEINFO" Value="http://www.groestlcoin.org/downloads/" />
+	<Property Id="ARPHELPLINK" Value="http://www.dallar.org/downloads/" />
+	<Property Id="ARPURLINFOABOUT" Value="http://www.dallar.org/downloads/" />
+	<Property Id="ARPURLUPDATEINFO" Value="http://www.dallar.org/downloads/" />
 	<Property Id="LAUNCHPRODUCT">0</Property>
 	<Property Id="ARPNOREPAIR" Value="1" />
 <!--    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />-->
@@ -58,10 +58,10 @@
 		<Directory Id="DesktopFolder" Name="Desktop" />
 	</Directory>
 
-	<Media Id="1" Cabinet="groestlcoin.cab" EmbedCab="yes"/>
+	<Media Id="1" Cabinet="dallar.cab" EmbedCab="yes"/>
 
 	<Component Id='CMP_GrsQt' Guid='a677466c-3dbe-476f-a225-eb19da78004d' Directory='INSTALLDIR' >
-		<File  Id="groestlcoin_qt.exe" Source="$(var.OUTDIR)\groestlcoin-qt.exe"    KeyPath='yes'       >
+		<File  Id="dallar_qt.exe" Source="$(var.OUTDIR)\dallar-qt.exe"    KeyPath='yes'       >
 <!--            <Shortcut Id="startmenuDallar"     Directory="ProgramMenuFolder"   Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" /> -->
 			<Shortcut Id="desktopDallar"   Directory="DesktopFolder"       Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" />
 		</File>
@@ -69,13 +69,13 @@
 	</Component>
 
 	<Component Id='CMP_GrsDaemon' Guid='32b21315-0f58-4af8-8f14-156645ecfad6' Directory='DAEMON' >
-		<File  Source="$(var.OUTDIR)\groestlcoind.exe"  KeyPath='yes'       />
-		<File  Source="$(var.OUTDIR)\groestlcoin-cli.exe"           />
+		<File  Source="$(var.OUTDIR)\dallard.exe"  KeyPath='yes'       />
+		<File  Source="$(var.OUTDIR)\dallar-cli.exe"           />
 	</Component>
 
 	<DirectoryRef Id="ApplicationProgramsFolder">
 		<Component Id='CMP_ApplicationShortcut' Guid='ed335276-6250-4832-98b3-3694ff8beaee'>
-			<Shortcut Id="startmenuDallar" Name="Dallar Core" Target="[#groestlcoin_qt.exe]" Icon="Dallar.ico" IconIndex="0" Advertise="no" />
+			<Shortcut Id="startmenuDallar" Name="Dallar Core" Target="[#dallar_qt.exe]" Icon="Dallar.ico" IconIndex="0" Advertise="no" />
 			<Shortcut Id='UninstallProduct'     Name='Uninstall Dallar Core' Description='Uninstalls Dallar Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
 			<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
 			<RegistryValue Root="HKCU" Key="Software\Dallar" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
@@ -84,7 +84,7 @@
 
 	<CustomAction Id="NewerVersionDetected" Error="There is a later version of this product installed"/>
 	<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
-	<CustomAction Id='LaunchFile' FileKey='groestlcoin_qt.exe' ExeCommand='' Return="asyncNoWait" />
+	<CustomAction Id='LaunchFile' FileKey='dallar_qt.exe' ExeCommand='' Return="asyncNoWait" />
 
 	<InstallUISequence>
 		<AppSearch After="FindRelatedProducts"/>

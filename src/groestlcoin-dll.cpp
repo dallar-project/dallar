@@ -1,26 +1,26 @@
 
 
-#define main groestlcoind_main
-#include "groestlcoind.cpp"
+#define main dallard_main
+#include "dallard.cpp"
 
 extern "C" __declspec(dllexport) void DallardEntry() {
-	exit(groestlcoind_main(__argc, __argv));
+	exit(dallard_main(__argc, __argv));
 }
 
 #undef main
-#define main groestlcoin_cli_main
-#include "groestlcoin-cli.cpp"
+#define main dallar_cli_main
+#include "dallar-cli.cpp"
 
 extern "C" __declspec(dllexport) void DallarCliEntry() {
-	exit(groestlcoin_cli_main(__argc, __argv));
+	exit(dallar_cli_main(__argc, __argv));
 }
 
 #undef main
-#define main groestlcoin_tx_main
-#include "groestlcoin-tx.cpp"
+#define main dallar_tx_main
+#include "dallar-tx.cpp"
 
 extern "C" __declspec(dllexport) void DallarTxEntry() {
-	exit(groestlcoin_tx_main(__argc, __argv));
+	exit(dallar_tx_main(__argc, __argv));
 }
 
 #undef main

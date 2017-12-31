@@ -97,8 +97,8 @@ namespace boost {
 
 using namespace std;
 
-const char * const BITCOIN_CONF_FILENAME = "groestlcoin.conf";
-const char * const BITCOIN_PID_FILENAME = "groestlcoin.pid";
+const char * const BITCOIN_CONF_FILENAME = "dallar.conf";
+const char * const BITCOIN_PID_FILENAME = "dallar.pid";
 
 CCriticalSection cs_args;
 map<string, string> mapArgs;
@@ -455,7 +455,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "groestlcoin";
+    const char* pszModule = "dallar";
 #endif
     if (pex)
         return strprintf(
@@ -494,7 +494,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Dallar";
 #else
     // Unix
-    return pathRet / ".groestlcoin";
+    return pathRet / ".dallar";
 #endif
 #endif
 }
@@ -554,7 +554,7 @@ void ReadConfigFile(const std::string& confPath)
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile(confPath));
     if (!streamConfig.good())
-        return; // No groestlcoin.conf file is OK
+        return; // No dallar.conf file is OK
 
     {
         LOCK(cs_args);
@@ -563,7 +563,7 @@ void ReadConfigFile(const std::string& confPath)
 
         for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
         {
-            // Don't overwrite existing settings so command line settings override groestlcoin.conf
+            // Don't overwrite existing settings so command line settings override dallar.conf
             string strKey = string("-") + it->string_key;
             string strValue = it->value[0];
             InterpretNegativeSetting(strKey, strValue);

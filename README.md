@@ -8,7 +8,7 @@ Updated to Bitcoin reference wallet 0.13.3 on January 2017
 
 Dallar Core Wallet
 
-http://www.groestlcoin.org
+http://www.dallar.org
 
 The algorithm was written as a candidate for sha3
 
@@ -28,7 +28,7 @@ out collectively by the network. Dallar Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Dallar Core software, see http://www.groestlcoin.org/download.
+the Dallar Core software, see http://www.dallar.org/download.
 
 License
 -------
@@ -54,7 +54,7 @@ match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or a
 controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/groestlcoin/groestlcoin/tags) are created
+completely stable. [Tags](https://github.com/dallar/dallar/tags) are created
 regularly to indicate new official, stable release versions of Dallar.
 
 Testing
@@ -102,7 +102,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play groestlcoins" on the test network, if you
+Run with the -testnet option to run with "play dallars" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the -regtest option.

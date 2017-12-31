@@ -1623,7 +1623,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("groestlcoin-scriptch");
+    RenameThread("dallar-scriptch");
     scriptcheckqueue.Thread();
 }
 

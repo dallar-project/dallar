@@ -115,7 +115,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Пошаљите новац на groestlcoin адресу</translation>
+        <translation>Пошаљите новац на dallar адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -392,7 +392,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcije</translation>
