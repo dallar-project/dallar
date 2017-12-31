@@ -38,9 +38,9 @@ const std::string CLIENT_NAME("Groestlcoin");
  */
 
 //! First, include build.h if requested
-#ifdef HAVE_BUILD_INFO
-#include "build.h"
-#endif
+// #ifdef HAVE_BUILD_INFO
+// #include "build.h"
+// #endif
 
 //! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1

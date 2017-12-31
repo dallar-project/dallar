@@ -181,6 +181,8 @@ libdallar_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPP
 libdallar_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libdallar_server_a_SOURCES = \
   addrdb.cpp \
+  addrman.cpp \
+  amount.cpp \
   bloom.cpp \
   blockencodings.cpp \
   chain.cpp \
