@@ -262,7 +262,7 @@
 <context>
     <name>groestlcoin-core</name>
     <message>
-        <source>Groestlcoin Core</source>
+        <source>Dallar Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

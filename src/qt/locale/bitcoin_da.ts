@@ -62,12 +62,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your Groestlcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Groestlcoin-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender groestlcoins.</translation>
+        <source>These are your Dallar addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine Dallar-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender groestlcoins.</translation>
     </message>
     <message>
-        <source>These are your Groestlcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Groestlcoin-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
+        <source>These are your Dallar addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Dallar-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -322,8 +322,8 @@
         <translation>Genindekserer blokke på disken…</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
-        <translation>Send groestlcoins til en Groestlcoin-adresse</translation>
+        <source>Send coins to a Dallar address</source>
+        <translation>Send groestlcoins til en Dallar-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -346,8 +346,8 @@
         <translation>&amp;Verificér besked…</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
-        <translation>Groestlcoin</translation>
+        <source>Dallar</source>
+        <translation>Dallar</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -374,12 +374,12 @@
         <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
-        <translation>Signér beskeder med dine Groestlcoin-adresser for at bevise, at de tilhører dig</translation>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
+        <translation>Signér beskeder med dine Dallar-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Groestlcoin-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Dallar-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +418,8 @@
         <translation>Tilvalg for &amp;kommandolinje</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Groestlcoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Groestlcoin-netværket</numerusform><numerusform>%n aktive forbindelser til Groestlcoin-netværket</numerusform></translation>
+        <source>%n active connection(s) to Dallar network</source>
+        <translation><numerusform>%n aktiv forbindelse til Dallar-netværket</numerusform><numerusform>%n aktive forbindelser til Dallar-netværket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -486,8 +486,8 @@
         <translation>Opdateret</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Groestlcoin command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Groestlcoin kommandolinje</translation>
+        <source>Show the %1 help message to get a list with possible Dallar command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Dallar kommandolinje</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -806,8 +806,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Groestlcoin address.</source>
-        <translation>Den indtastede adresse "%1" er ikke en gyldig Groestlcoin-adresse.</translation>
+        <source>The entered address "%1" is not a valid Dallar address.</source>
+        <translation>Den indtastede adresse "%1" er ikke en gyldig Dallar-adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -915,8 +915,8 @@
         <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Groestlcoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 vil downloade og gemme et kopi af Groestlcoin-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
+        <source>%1 will download and store a copy of the Dallar block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 vil downloade og gemme et kopi af Dallar-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1061,16 +1061,16 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the Groestlcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk Groestlcoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the Dallar client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk Dallar-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Konfigurér port vha. &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Groestlcoin network through a SOCKS5 proxy.</source>
-        <translation>Forbind til Groestlcoin-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the Dallar network through a SOCKS5 proxy.</source>
+        <translation>Forbind til Dallar-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1109,8 +1109,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Groestlcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til Groestlcoin-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+        <source>Connect to the Dallar network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til Dallar-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1208,8 +1208,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Groestlcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Groestlcoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dallar network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Dallar-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1299,8 +1299,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Groestlcoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Groestlcoin-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Dallar address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Dallar-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1389,8 +1389,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a Groestlcoin address (e.g. %1)</source>
-        <translation>Indtast en Groestlcoin-adresse (fx %1)</translation>
+        <source>Enter a Dallar address (e.g. %1)</source>
+        <translation>Indtast en Dallar-adresse (fx %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1754,8 +1754,8 @@
         <translation>&amp;Genbrug en eksisterende modtagelsesadresse (anbefales ikke)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Groestlcoin network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Groestlcoin-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dallar network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Dallar-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2151,8 +2151,8 @@
         <translation><numerusform>Bekræftelse estimeret til at begynde inden for %n blok.</numerusform><numerusform>Bekræftelse estimeret til at begynde inden for %n blokke.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Groestlcoin address</source>
-        <translation>Advarsel: Ugyldig Groestlcoin-adresse</translation>
+        <source>Warning: Invalid Dallar address</source>
+        <translation>Advarsel: Ugyldig Dallar-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2186,8 +2186,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Groestlcoin address to send the payment to</source>
-        <translation>Groestlcoin-adresse, som betalingen skal sendes til</translation>
+        <source>The Dallar address to send the payment to</source>
+        <translation>Dallar-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2230,8 +2230,8 @@
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Groestlcoin network.</source>
-        <translation>En besked, som blev føjet til "bitcon:"-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Groestlcoin-netværket.</translation>
+        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>En besked, som blev føjet til "bitcon:"-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Dallar-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2279,8 +2279,8 @@
         <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage groestlcoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The Groestlcoin address to sign the message with</source>
-        <translation>Groestlcoin-adresse, som beskeden skal signeres med</translation>
+        <source>The Dallar address to sign the message with</source>
+        <translation>Dallar-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2311,8 +2311,8 @@
         <translation>Kopiér den nuværende signatur til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Groestlcoin address</source>
-        <translation>Signér denne besked for at bevise, at Groestlcoin-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this Dallar address</source>
+        <translation>Signér denne besked for at bevise, at Dallar-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2335,12 +2335,12 @@
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The Groestlcoin address the message was signed with</source>
-        <translation>Groestlcoin-adressen, som beskeden blev signeret med</translation>
+        <source>The Dallar address the message was signed with</source>
+        <translation>Dallar-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Groestlcoin address</source>
-        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Groestlcoin-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Dallar address</source>
+        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Dallar-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2992,8 +2992,8 @@
         <translation>Acceptér forbindelser udefra (standard: 1 hvis hverken -proxy eller -connect)</translation>
     </message>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Groestlcoin Core</translation>
+        <source>Dallar Core</source>
+        <translation>Dallar Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

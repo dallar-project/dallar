@@ -1,5 +1,5 @@
 /*
- * Groestl implementation.
+ * Dallar implementation.
  *
  * ==========================(LICENSE BEGIN)============================
  *

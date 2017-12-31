@@ -481,7 +481,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Groestlcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Dallar";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -491,7 +491,7 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Groestlcoin";
+    return pathRet / "Library/Application Support/Dallar";
 #else
     // Unix
     return pathRet / ".groestlcoin";

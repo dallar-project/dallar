@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Groestlcoin"
-            VALUE "FileDescription",    "groestlcoin-tx (CLI Groestlcoin transaction editor utility)"
+            VALUE "CompanyName",        "Dallar"
+            VALUE "FileDescription",    "groestlcoin-tx (CLI Dallar transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "groestlcoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

@@ -158,8 +158,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
-        <translation>Stuur munte na 'n Groestlcoin adres</translation>
+        <source>Send coins to a Dallar address</source>
+        <translation>Stuur munte na 'n Dallar adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +170,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
-        <translation>Groestlcoin</translation>
+        <source>Dallar</source>
+        <translation>Dallar</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Groestlcoin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Dallar adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Groestlcoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Dallar adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -710,8 +710,8 @@
 <context>
     <name>groestlcoin-core</name>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Groestlcoin Kern</translation>
+        <source>Dallar Core</source>
+        <translation>Dallar Kern</translation>
     </message>
     <message>
         <source>Information</source>

@@ -142,8 +142,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
-        <translation>Trimite monedele către o adresă Groestlcoin</translation>
+        <source>Send coins to a Dallar address</source>
+        <translation>Trimite monedele către o adresă Dallar</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
-        <translation>Groestlcoin</translation>
+        <source>Dallar</source>
+        <translation>Dallar</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Groestlcoin pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de Dallar pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Groestlcoin specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Dallar specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -746,8 +746,8 @@
 <context>
     <name>groestlcoin-core</name>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Groestlcoin Core</translation>
+        <source>Dallar Core</source>
+        <translation>Dallar Core</translation>
     </message>
     <message>
         <source>Information</source>

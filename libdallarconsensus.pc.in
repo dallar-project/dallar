@@ -4,7 +4,7 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: @PACKAGE_NAME@ consensus library
-Description: Library for the Groestlcoin consensus protocol.
+Description: Library for the Dallar consensus protocol.
 Version: @PACKAGE_VERSION@
 Libs: -L${libdir} -lgroestlcoinconsensus
 Cflags: -I${includedir}

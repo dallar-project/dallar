@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2015 The Groestlcoin developers
+// Copyright (c) 2014-2015 The Dallarcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +21,7 @@ extern "C" {
 
 namespace XCoin {
 
-uint256 HashGroestl(const ConstBuf& cbuf) {
+uint256 HashDallar(const ConstBuf& cbuf) {
     sph_groestl512_context ctx_gr[3];
     static unsigned char pblank[1];
     uint256 hash[6];
@@ -57,7 +57,7 @@ uint256 HashForSignature(const ConstBuf& cbuf) {
 	return r;
 }
 
-void GroestlHasher::Finalize(unsigned char h[32]) {
+void DallarHasher::Finalize(unsigned char h[32]) {
 	auto c = (sph_groestl512_context*)ctx;
 	uint256 hash[6];
 	sph_groestl512_close(c, static_cast<void*>(&hash[0]));
@@ -74,29 +74,29 @@ void GroestlHasher::Finalize(unsigned char h[32]) {
 	memcpy(h, static_cast<void*>(&hash[4]), 32);
 }
 
-GroestlHasher& GroestlHasher::Write(const unsigned char *data, size_t len) {
+DallarHasher& DallarHasher::Write(const unsigned char *data, size_t len) {
 	auto c = (sph_groestl512_context*)ctx;
 	sph_groestl512(c, data, len);
 	return *this;
 }
 
-GroestlHasher::GroestlHasher() {
+DallarHasher::DallarHasher() {
 	auto c = new sph_groestl512_context;
 	ctx = c;
 	sph_groestl512_init(c);
 }
 
-GroestlHasher::GroestlHasher(GroestlHasher&& x)
+DallarHasher::DallarHasher(DallarHasher&& x)
 	:	ctx(x.ctx)
 {
 	x.ctx = 0;
 }
 
-GroestlHasher::~GroestlHasher() {
+DallarHasher::~DallarHasher() {
 	delete (sph_groestl512_context*)ctx;
 }
 
-GroestlHasher& GroestlHasher::operator=(GroestlHasher&& x)
+DallarHasher& DallarHasher::operator=(DallarHasher&& x)
 {
 	delete (sph_groestl512_context*)ctx;
 	ctx = x.ctx;

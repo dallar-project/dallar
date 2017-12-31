@@ -158,8 +158,8 @@
         <translation>Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
-        <translation>Groestlcoin küldése megadott címre</translation>
+        <source>Send coins to a Dallar address</source>
+        <translation>Dallar küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -182,8 +182,8 @@
         <translation>Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
-        <translation>Groestlcoin</translation>
+        <source>Dallar</source>
+        <translation>Dallar</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -210,12 +210,12 @@
         <translation>A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
-        <translation>Üzenetek aláírása a Groestlcoin-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
+        <translation>Üzenetek aláírása a Dallar-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
-        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt Groestlcoin-címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
+        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt Dallar-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -254,8 +254,8 @@
         <translation>Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Groestlcoin network</source>
-        <translation><numerusform>%n aktív kapcsolat a Groestlcoin hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Groestlcoin hálózathoz</numerusform></translation>
+        <source>%n active connection(s) to Dallar network</source>
+        <translation><numerusform>%n aktív kapcsolat a Dallar hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Dallar hálózathoz</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -609,16 +609,16 @@
         <translation>Szakértő</translation>
     </message>
     <message>
-        <source>Automatically open the Groestlcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>A Groestlcoin-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Dallar client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>A Dallar-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the Groestlcoin network through a SOCKS5 proxy.</source>
-        <translation>Csatlakozás a Groestlcoin hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the Dallar network through a SOCKS5 proxy.</source>
+        <translation>Csatlakozás a Dallar hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -712,8 +712,8 @@
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Groestlcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Groestlcoin hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dallar network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Dallar hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -785,8 +785,8 @@
         <translation>Összeg</translation>
     </message>
     <message>
-        <source>Enter a Groestlcoin address (e.g. %1)</source>
-        <translation>Ad meg egy Groestlcoin címet (pl: %1)</translation>
+        <source>Enter a Dallar address (e.g. %1)</source>
+        <translation>Ad meg egy Dallar címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1311,7 +1311,7 @@
         <translation>A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Groestlcoin address</source>
+        <source>Sign the message to prove you own this Dallar address</source>
         <translation>Üzenet </translation>
     </message>
     <message>
@@ -1408,8 +1408,8 @@
         <translation>Kívülről érkező kapcsolatok elfogadása (alapértelmezett: 1, ha nem használt a -proxy vagy a -connect)</translation>
     </message>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Groestlcoin Core</translation>
+        <source>Dallar Core</source>
+        <translation>Dallar Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

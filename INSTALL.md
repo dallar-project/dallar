@@ -1,5 +1,5 @@
-Building Groestlcoin
+Building Dallar
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the Groestlcoin Core reference implementation of Groestlcoin.
+elements of the Dallar Core reference implementation of Dallar.

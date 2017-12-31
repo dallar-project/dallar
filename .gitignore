@@ -79,6 +79,7 @@ test/
 Makefile
 groestlcoin-qt
 Groestlcoin-Qt.app
+Dallar-Qt.app
 
 # Unit-tests
 Makefile.test

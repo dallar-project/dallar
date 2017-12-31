@@ -10,8 +10,8 @@
 	<?define OUTDIR="x86_R_St\"?>
 <?endif ?>
 
-<Product Name='Groestlcoin Core' Id='*' UpgradeCode='$(var.UpgradeCode)' Version='$(var.PRODVER)' Manufacturer='Groestlcoin' Language='1033' >
-	<Package Id='*' Keywords='Installer' Description="Groestlcoin Core" Comments='Groestlcoin Core' Manufacturer='Groestlcoin' InstallerVersion='301' Compressed='yes'  />
+<Product Name='Dallar Core' Id='*' UpgradeCode='$(var.UpgradeCode)' Version='$(var.PRODVER)' Manufacturer='Dallar' Language='1033' >
+	<Package Id='*' Keywords='Installer' Description="Dallar Core" Comments='Dallar Core' Manufacturer='Dallar' InstallerVersion='301' Compressed='yes'  />
 
 	<UIRef Id="WixUI_InstallDir" />
 
@@ -21,10 +21,10 @@
 		<UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
 	</Upgrade>
 
-	<Icon Id="Groestlcoin.ico" SourceFile="src\qt\res\icons\groestlcoin.ico " />
+	<Icon Id="Dallar.ico" SourceFile="src\qt\res\icons\groestlcoin.ico " />
 
-	<Property Id="ARPPRODUCTICON" Value="Groestlcoin.ico" />
-	<Property Id='DiskPrompt' Value="Groestlcoin Core" />
+	<Property Id="ARPPRODUCTICON" Value="Dallar.ico" />
+	<Property Id='DiskPrompt' Value="Dallar Core" />
 	<Property Id="ARPHELPLINK" Value="http://www.groestlcoin.org/downloads/" />
 	<Property Id="ARPURLINFOABOUT" Value="http://www.groestlcoin.org/downloads/" />
 	<Property Id="ARPURLUPDATEINFO" Value="http://www.groestlcoin.org/downloads/" />
@@ -40,20 +40,20 @@
 	<Directory Id='TARGETDIR' Name='SourceDir'>
 <?if $(sys.BUILDARCH) = x64 ?>
 		<Directory Id='ProgramFiles64Folder' Name='PFiles'>
-			<Directory Id='INSTALLDIR' Name='Groestlcoin'>
+			<Directory Id='INSTALLDIR' Name='Dallar'>
 	   			<Directory Id='DAEMON' Name='daemon' />
 			</Directory>
 		</Directory>
 <?else ?>
 		<Directory Id='ProgramFilesFolder' Name='PFiles'>
-			<Directory Id='INSTALLDIR' Name='Groestlcoin'>
+			<Directory Id='INSTALLDIR' Name='Dallar'>
 	   			<Directory Id='DAEMON' Name='daemon' />
 			</Directory>
 		</Directory>
 <?endif ?>
 
 		<Directory Id="ProgramMenuFolder">
-			<Directory Id="ApplicationProgramsFolder" Name="Groestlcoin Core"/>
+			<Directory Id="ApplicationProgramsFolder" Name="Dallar Core"/>
 		</Directory>
 		<Directory Id="DesktopFolder" Name="Desktop" />
 	</Directory>
@@ -62,10 +62,10 @@
 
 	<Component Id='CMP_GrsQt' Guid='a677466c-3dbe-476f-a225-eb19da78004d' Directory='INSTALLDIR' >
 		<File  Id="groestlcoin_qt.exe" Source="$(var.OUTDIR)\groestlcoin-qt.exe"    KeyPath='yes'       >
-<!--            <Shortcut Id="startmenuGroestlcoin"     Directory="ProgramMenuFolder"   Name="Groestlcoin Core" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" /> -->
-			<Shortcut Id="desktopGroestlcoin"   Directory="DesktopFolder"       Name="Groestlcoin Core" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
+<!--            <Shortcut Id="startmenuDallar"     Directory="ProgramMenuFolder"   Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" /> -->
+			<Shortcut Id="desktopDallar"   Directory="DesktopFolder"       Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" />
 		</File>
-		<Shortcut Id='UninstallProductFromInstallDir'     Name='Uninstall Groestlcoin Core' Description='Uninstalls Groestlcoin Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
+		<Shortcut Id='UninstallProductFromInstallDir'     Name='Uninstall Dallar Core' Description='Uninstalls Dallar Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
 	</Component>
 
 	<Component Id='CMP_GrsDaemon' Guid='32b21315-0f58-4af8-8f14-156645ecfad6' Directory='DAEMON' >
@@ -75,10 +75,10 @@
 
 	<DirectoryRef Id="ApplicationProgramsFolder">
 		<Component Id='CMP_ApplicationShortcut' Guid='ed335276-6250-4832-98b3-3694ff8beaee'>
-			<Shortcut Id="startmenuGroestlcoin" Name="Groestlcoin Core" Target="[#groestlcoin_qt.exe]" Icon="Groestlcoin.ico" IconIndex="0" Advertise="no" />
-			<Shortcut Id='UninstallProduct'     Name='Uninstall Groestlcoin Core' Description='Uninstalls Groestlcoin Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
+			<Shortcut Id="startmenuDallar" Name="Dallar Core" Target="[#groestlcoin_qt.exe]" Icon="Dallar.ico" IconIndex="0" Advertise="no" />
+			<Shortcut Id='UninstallProduct'     Name='Uninstall Dallar Core' Description='Uninstalls Dallar Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
 			<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
-			<RegistryValue Root="HKCU" Key="Software\Groestlcoin" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			<RegistryValue Root="HKCU" Key="Software\Dallar" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
 		</Component>
 	</DirectoryRef>
 
@@ -102,7 +102,7 @@
 
 	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
 
-	<Feature Id='Complete' Level='1' Title='Groestlcoin Core'>
+	<Feature Id='Complete' Level='1' Title='Dallar Core'>
 		<ComponentRef Id='CMP_GrsQt'				/>
 		<ComponentRef Id='CMP_GrsDaemon'			/>
 		<ComponentRef Id='CMP_ApplicationShortcut'	/>

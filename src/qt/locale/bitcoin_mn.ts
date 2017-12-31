@@ -126,7 +126,7 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
+        <source>Dallar</source>
         <translation>Биткойн</translation>
     </message>
     <message>

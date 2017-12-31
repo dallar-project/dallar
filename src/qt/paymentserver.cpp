@@ -451,7 +451,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid Groestlcoin address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid Dallar address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
@@ -563,7 +563,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus& request, Sen
             addresses.append(QString::fromStdString(CBitcoinAddress(dest).ToString()));
         }
         else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Unauthenticated payment requests to custom Groestlcoin addresses are not supported
+            // Unauthenticated payment requests to custom Dallar addresses are not supported
             // (there is no good way to tell the user where they are paying in a way they'd
             // have a chance of understanding).
             Q_EMIT message(tr("Payment request rejected"),

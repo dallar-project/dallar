@@ -153,9 +153,9 @@ UniValue validateaddress(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() != 1)
         throw runtime_error(
             "validateaddress \"groestlcoinaddress\"\n"
-            "\nReturn information about the given Groestlcoin address.\n"
+            "\nReturn information about the given Dallar address.\n"
             "\nArguments:\n"
-            "1. \"groestlcoinaddress\"     (string, required) The Groestlcoin address to validate\n"
+            "1. \"groestlcoinaddress\"     (string, required) The Dallar address to validate\n"
             "\nResult:\n"
             "{\n"
             "  \"isvalid\" : true|false,       (boolean) If the address is valid or not. If not, this is the only property returned.\n"
@@ -237,7 +237,7 @@ CScript _createmultisig_redeemScript(const UniValue& params)
     {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: Groestlcoin address and we have full public key:
+        // Case 1: Dallar address and we have full public key:
         CBitcoinAddress address(ks);
         if (pwalletMain && address.IsValid())
         {
@@ -288,9 +288,9 @@ UniValue createmultisig(const JSONRPCRequest& request)
 
             "\nArguments:\n"
             "1. nrequired      (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keys\"       (string, required) A json array of keys which are Groestlcoin addresses or hex-encoded public keys\n"
+            "2. \"keys\"       (string, required) A json array of keys which are Dallar addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"key\"    (string) Groestlcoin address or hex-encoded public key\n"
+            "       \"key\"    (string) Dallar address or hex-encoded public key\n"
             "       ,...\n"
             "     ]\n"
 
@@ -328,7 +328,7 @@ UniValue verifymessage(const JSONRPCRequest& request)
             "verifymessage \"groestlcoinaddress\" \"signature\" \"message\"\n"
             "\nVerify a signed message\n"
             "\nArguments:\n"
-            "1. \"groestlcoinaddress\"  (string, required) The Groestlcoin address to use for the signature.\n"
+            "1. \"groestlcoinaddress\"  (string, required) The Dallar address to use for the signature.\n"
             "2. \"signature\"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage).\n"
             "3. \"message\"         (string, required) The message that was signed.\n"
             "\nResult:\n"

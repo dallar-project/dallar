@@ -1,4 +1,4 @@
-Groestlcoin Core 2.13.3
+Dallar Core 2.13.3
 =====================
 
 Setup
@@ -9,7 +9,7 @@ To download Bitcoin Core, visit [bitcoincore.org](https://bitcoincore.org/en/rel
 
 Running
 ---------------------
-The following are some helpful notes on how to run Groestlcoin on your native platform.
+The following are some helpful notes on how to run Dallar on your native platform.
 
 ### Unix
 
@@ -24,7 +24,7 @@ Unpack the files into a directory, and then run groestlcoin-qt.exe.
 
 ### OS X
 
-Drag Groestlcoin-Core to your applications folder, and then run Groestlcoin-Core.
+Drag Dallar-Core to your applications folder, and then run Dallar-Core.
 
 ### Need Help?
 
@@ -33,7 +33,7 @@ Drag Groestlcoin-Core to your applications folder, and then run Groestlcoin-Core
 
 Building
 ---------------------
-The following are developer notes on how to build Groestlcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Dallar on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -43,7 +43,7 @@ The following are developer notes on how to build Groestlcoin on your native pla
 
 Development
 ---------------------
-The Groestlcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Dallar repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)

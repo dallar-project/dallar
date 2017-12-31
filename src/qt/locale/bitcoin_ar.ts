@@ -158,7 +158,7 @@
         <translation>إعادة الفهرسة الكتل على القرص ...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
+        <source>Send coins to a Dallar address</source>
         <translation>ارسل عملات الى عنوان غرسلكوين</translation>
     </message>
     <message>
@@ -182,7 +182,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
+        <source>Dallar</source>
         <translation>غرسلكوين</translation>
     </message>
     <message>
@@ -210,12 +210,12 @@
         <translation>تشفير المفتاح الخاص بمحفظتك</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: Groestlcoin الخاص بك لإثبات امتلاكك لهم</translation>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: Dallar الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Groestlcoin محدَدة</translation>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Dallar محدَدة</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -247,7 +247,7 @@
     </message>
     <message>
         <source>Open a groestlcoin: URI or payment request</source>
-        <translation>فتح URI : Groestlcoin أو طلب دفع</translation>
+        <translation>فتح URI : Dallar أو طلب دفع</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1009,7 +1009,7 @@
         <translation>هذا دفع اعتيادي</translation>
     </message>
     <message>
-        <source>The Groestlcoin address to send the payment to</source>
+        <source>The Dallar address to send the payment to</source>
         <translation>عنوان الغرسلكوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -1078,7 +1078,7 @@
         <translation>التوقيع</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Groestlcoin address</source>
+        <source>Sign the message to prove you own this Dallar address</source>
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان الغرسلكوين هذا</translation>
     </message>
     <message>
@@ -1151,7 +1151,7 @@
         <translation>قبول الاتصالات من خارج</translation>
     </message>
     <message>
-        <source>Groestlcoin Core</source>
+        <source>Dallar Core</source>
         <translation>جوهر الغرسلكوين</translation>
     </message>
     <message>

@@ -94,8 +94,8 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
-        <translation>Groestlcoin</translation>
+        <source>Dallar</source>
+        <translation>Dallar</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -438,8 +438,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Berthama Groestlcoin</translation>
+        <source>Dallar Core</source>
+        <translation>Berthama Dallar</translation>
     </message>
     <message>
         <source>Information</source>

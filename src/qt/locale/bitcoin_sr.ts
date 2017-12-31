@@ -114,7 +114,7 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
+        <source>Send coins to a Dallar address</source>
         <translation>Пошаљите новац на groestlcoin адресу</translation>
     </message>
     <message>

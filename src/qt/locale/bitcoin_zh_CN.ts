@@ -62,11 +62,11 @@
         <translation>收款地址</translation>
     </message>
     <message>
-        <source>These are your Groestlcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Dallar addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>这些是你要付款过去的复述币地址。在付钱之前，务必要检查金额和收款地址是否正确。</translation>
     </message>
     <message>
-        <source>These are your Groestlcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Dallar addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>这些是你用来收款的复述币地址。建议在每次交易时，都使用一个新的收款地址。</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@
         <translation>正在为数据块重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a Groestlcoin address</source>
+        <source>Send coins to a Dallar address</source>
         <translation>向一个复述币地址发送复述币</translation>
     </message>
     <message>
@@ -346,7 +346,7 @@
         <translation>验证消息(&amp;V)...</translation>
     </message>
     <message>
-        <source>Groestlcoin</source>
+        <source>Dallar</source>
         <translation>复述币</translation>
     </message>
     <message>
@@ -374,11 +374,11 @@
         <translation>对钱包中的私钥加密</translation>
     </message>
     <message>
-        <source>Sign messages with your Groestlcoin addresses to prove you own them</source>
+        <source>Sign messages with your Dallar addresses to prove you own them</source>
         <translation>用复述币地址关联的私钥为消息签名，以证明您拥有这个复述币地址</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Groestlcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
         <translation>校验消息，确保该消息是由指定的复述币地址所有者签名的</translation>
     </message>
     <message>
@@ -418,7 +418,7 @@
         <translation>命令行选项(&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Groestlcoin network</source>
+        <source>%n active connection(s) to Dallar network</source>
         <translation><numerusform>%n 个到复述币网络的活动连接</numerusform></translation>
     </message>
     <message>
@@ -802,7 +802,7 @@
         <translation>编辑付款地址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Groestlcoin address.</source>
+        <source>The entered address "%1" is not a valid Dallar address.</source>
         <translation>输入的地址 %1 并不是有效的复述币地址。</translation>
     </message>
     <message>
@@ -912,7 +912,7 @@
         <translation>由于这是第一次启动此程序，您可以选择%1的数据所存储的位置</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Groestlcoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the Dallar block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>%1 会下载并存储一份复述币区块链的副本。至少有 %2GB 的数据会存储到这个目录中，并且还会持续增长。另外钱包资料也会储存在这个目录。</translation>
     </message>
     <message>
@@ -1058,7 +1058,7 @@
         <translation>使用未经确认的零钱(&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the Groestlcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Dallar client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>自动在路由器中打开复述币端口。只有当您的路由器开启了 UPnP 选项时此功能才有效。</translation>
     </message>
     <message>
@@ -1066,7 +1066,7 @@
         <translation>使用 &amp;UPnP 映射端口</translation>
     </message>
     <message>
-        <source>Connect to the Groestlcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Dallar network through a SOCKS5 proxy.</source>
         <translation>通过 SOCKS5 代理连接复述币网络。</translation>
     </message>
     <message>
@@ -1106,7 +1106,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Groestlcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Dallar network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>在 Tor 匿名网络下通过不同的 SOCKS5 代理连接复述币网络</translation>
     </message>
     <message>
@@ -1205,7 +1205,7 @@
         <translation>表单</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Groestlcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dallar network after a connection is established, but this process has not completed yet.</source>
         <translation>现在显示的消息可能是过期的。在连接上复述币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成。</translation>
     </message>
     <message>
@@ -1297,7 +1297,7 @@
         <translation>无效的付款地址 %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Groestlcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Dallar address or malformed URI parameters.</source>
         <translation>无法解析 URI 地址！可能是因为复述币地址无效，或是 URI 参数格式错误。</translation>
     </message>
     <message>
@@ -1347,7 +1347,7 @@
         <translation>金额</translation>
     </message>
     <message>
-        <source>Enter a Groestlcoin address (e.g. %1)</source>
+        <source>Enter a Dallar address (e.g. %1)</source>
         <translation>请输入一个复述币地址 (例如 %1)</translation>
     </message>
     <message>
@@ -1708,7 +1708,7 @@
         <translation>重用现有的接收地址（不推荐）</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Groestlcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dallar network.</source>
         <translation>可在付款请求上备注一条信息，在打开付款请求时可以看到。注意：该消息不是通过复述币网络传送。</translation>
     </message>
     <message>
@@ -2029,7 +2029,7 @@
         <translation>付款请求已过期。</translation>
     </message>
     <message>
-        <source>Warning: Invalid Groestlcoin address</source>
+        <source>Warning: Invalid Dallar address</source>
         <translation>警告: 复述币地址无效</translation>
     </message>
     <message>
@@ -2060,7 +2060,7 @@
         <translation>这是笔正常的支付。</translation>
     </message>
     <message>
-        <source>The Groestlcoin address to send the payment to</source>
+        <source>The Dallar address to send the payment to</source>
         <translation>付款目的地址</translation>
     </message>
     <message>
@@ -2104,7 +2104,7 @@
         <translation>请为此地址输入一个标签以将它加入用过的地址列表</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Groestlcoin network.</source>
+        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
         <translation>groestlcoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过复述币网络传输。</translation>
     </message>
     <message>
@@ -2149,7 +2149,7 @@
         <translation>您可以用你的地址对消息/协议进行签名，以证明您可以接收发送到该地址的复述币。注意不要对任何模棱两可或者随机的消息进行签名，以免遭受钓鱼式攻击。请确保消息内容准确的表达了您的真实意愿。</translation>
     </message>
     <message>
-        <source>The Groestlcoin address to sign the message with</source>
+        <source>The Dallar address to sign the message with</source>
         <translation>用来对消息签名的地址 </translation>
     </message>
     <message>
@@ -2181,7 +2181,7 @@
         <translation>复制当前签名至剪切板</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Groestlcoin address</source>
+        <source>Sign the message to prove you own this Dallar address</source>
         <translation>签名消息，证明这个地址属于您。</translation>
     </message>
     <message>
@@ -2205,11 +2205,11 @@
         <translation>请在下面输入接收者地址、消息（确保换行符、空格符、制表符等完全相同）和签名以验证消息。请仔细核对签名信息，以提防中间人攻击。请注意，这只是证明接收方签名的地址，它不能证明任何交易！</translation>
     </message>
     <message>
-        <source>The Groestlcoin address the message was signed with</source>
+        <source>The Dallar address the message was signed with</source>
         <translation>消息使用的签名地址</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Groestlcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Dallar address</source>
         <translation>验证消息，确保消息是由指定的复述币地址签名过的。</translation>
     </message>
     <message>
@@ -2507,8 +2507,8 @@
         <translation>接受来自外部的连接 (缺省: 如果不带 -proxy or -connect 参数设置为1)</translation>
     </message>
     <message>
-        <source>Groestlcoin Core</source>
-        <translation>Groestlcoin Core</translation>
+        <source>Dallar Core</source>
+        <translation>Dallar Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -865,7 +865,7 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                     else if (opcode == OP_HASH160)
                         CHash160().Write(vch.data(), vch.size()).Finalize(vchHash.data());
                     else if (opcode == OP_HASH256) {
-						uint256 v256 = XCoin::HashGroestl(XCoin::ConstBuf(vch));
+						uint256 v256 = XCoin::HashDallar(XCoin::ConstBuf(vch));
 						memcpy(&vchHash[0], v256.begin(), 32);
 //GRS                        CHash256().Write(vch.data(), vch.size()).Finalize(vchHash.data());
                     }

@@ -51,9 +51,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case GRS: return QString("Groestlcoins");
-    case mGRS: return QString("Milli-Groestlcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uGRS: return QString("Micro-Groestlcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case GRS: return QString("Dallars");
+    case mGRS: return QString("Milli-Dallars (1 / 1" THIN_SP_UTF8 "000)");
+    case uGRS: return QString("Micro-Dallars (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>GroestlCoin-Qt</string>
+  <string>Dallar-Qt</string>
   
   <key>CFBundleName</key>
-  <string>GroestlCoin-Qt</string>
+  <string>Dallar-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.groestlcoin.GroestlCoin-Qt</string>
+  <string>org.groestlcoin.Dallar-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.groestlcoin.GroestlCoinPayment</string>
+      <string>org.groestlcoin.DallarPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>groestlcoin</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.groestlcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>GroestlCoin payment request</string>
+      <string>Dallar payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

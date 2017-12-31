@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2014-2016 The Groestlcoin developers
+// Copyright (c) 2014-2016 The Dallar developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,7 +50,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Groestlcoin cannot be compiled without assertions."
+# error "Dallar cannot be compiled without assertions."
 #endif
 
 /**
@@ -89,7 +89,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "GroestlCoin Signed Message:\n";
+const string strMessageMagic = "Dallar Signed Message:\n";
 
 // Internal stuff
 namespace {
