@@ -242,8 +242,8 @@
         <translation>Verktøylinje for faner</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Forespør betalinger (genererer QR-koder og groestlcoin: URIer)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Forespør betalinger (genererer QR-koder og dallar: URIer)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -254,7 +254,7 @@
         <translation>Vis listen over bruke mottaksadresser og merkelapper</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
+        <source>Open a dallar: URI or payment request</source>
         <translation>Åpne en Dallar: URI eller betalingsetterspørring</translation>
     </message>
     <message>
@@ -782,7 +782,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av groestlcoins.</translation>
+        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av dallars.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1419,7 +1419,7 @@
         <translation>minstebeløp</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for groestlcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dallar transactions than the network can process.</source>
         <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Dallar-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
@@ -1526,8 +1526,8 @@
         <translation>Fjern denne oppføringen</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less groestlcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre groestlcoins enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dallars than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre dallars enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1550,8 +1550,8 @@
         <translation>Skriv inn en merkelapp for denne adressen for å legge den til listen av brukte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
-        <translation>En melding som var tilknyttet groestlcoinen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Dallar-nettverket.</translation>
+        <source>A message that was attached to the dallar: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>En melding som var tilknyttet dallaren: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Dallar-nettverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1583,8 +1583,8 @@
         <translation>&amp;Signer Melding</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive groestlcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta groestlcoins sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dallars sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta dallars sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
     </message>
     <message>
         <source>The Dallar address to sign the message with</source>
@@ -1706,7 +1706,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Innstillinger:</translation>

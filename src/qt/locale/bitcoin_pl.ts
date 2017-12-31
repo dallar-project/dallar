@@ -259,7 +259,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Wyślij monety na adres groestlcoinowy</translation>
+        <translation>Wyślij monety na adres dallarowy</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -315,7 +315,7 @@
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem groestlcoinowym.</translation>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem dallarowym.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -334,8 +334,8 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Żądaj płatności (generuje kod QR oraz groestlcoinowe URI)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Żądaj płatności (generuje kod QR oraz dallarowe URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -346,8 +346,8 @@
         <translation>Pokaż listę adresów i etykiet użytych do odbierania</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Otwórz URI groestlcoin: lub żądanie zapłaty</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Otwórz URI dallar: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1045,7 +1045,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dallar network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią groestlcoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią dallar, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1138,7 +1138,7 @@
     </message>
     <message>
         <source>Enter a Dallar address (e.g. %1)</source>
-        <translation>Wprowadź adres groestlcoinowy (np. %1)</translation>
+        <translation>Wprowadź adres dallarowy (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1663,8 +1663,8 @@
         <translation>razem przynajmniej</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for groestlcoin transactions than the network can process.</source>
-        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje groestlcoina niż sieć może przetworzyć.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dallar transactions than the network can process.</source>
+        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje dallara niż sieć może przetworzyć.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1786,8 +1786,8 @@
         <translation>Usuń ten wpis</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less groestlcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż groestlcoins wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dallars than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż dallars wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1810,8 +1810,8 @@
         <translation>Wprowadź etykietę dla tego adresu by dodać go do listy użytych adresów</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
-        <translation>Wiadomość, która została dołączona do URI groestlcoin:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Dallar.</translation>
+        <source>A message that was attached to the dallar: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>Wiadomość, która została dołączona do URI dallar:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Dallar.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1847,7 +1847,7 @@
         <translation>Podpi&amp;sz Wiadomość</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive groestlcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dallars sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
@@ -2007,7 +2007,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcje:</translation>

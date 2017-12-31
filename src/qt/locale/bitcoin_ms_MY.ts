@@ -161,6 +161,6 @@ Alihkan fail data ke dalam tab semasa</translation>
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     </context>
 </TS>

@@ -206,8 +206,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e groestlcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e dallar: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -218,8 +218,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Abrir un groestlcoin: URI ou solicitude de pago</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Abrir un dallar: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1004,7 +1004,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcións:</translation>

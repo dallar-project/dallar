@@ -1,10 +1,10 @@
 #	Build MSI packages
 
 MSB=%ProgramFiles(x86)%\MSBuild\14.0\Bin\amd64\msbuild.exe
-WIX_LINK = light.exe -ext WixUIExtension -ext WixUtilExtension -dWixUILicenseRtf=doc\groestlcoin_lic.rtf -dWixUIDialogBmp=share\pixmaps\wix-banner.bmp -dWixUIBannerBmp=share\pixmaps\wix-topbanner.bmp
+WIX_LINK = light.exe -ext WixUIExtension -ext WixUtilExtension -dWixUILicenseRtf=doc\dallar_lic.rtf -dWixUIDialogBmp=share\pixmaps\wix-banner.bmp -dWixUIBannerBmp=share\pixmaps\wix-topbanner.bmp
 
 
-all : groestlcoin_x86.msi groestlcoin_x64.msi
+all : dallar_x86.msi dallar_x64.msi
 
 src\qt\res_bitcoin.cpp : src\qt\moc.proj
 	cd src\qt
@@ -12,17 +12,17 @@ src\qt\res_bitcoin.cpp : src\qt\moc.proj
 	cd ..\..
 
 
-x86_R_St\groestlcoin-qt.exe : src\groestlcoin.cpp src\qt\res_bitcoin.cpp
-	""$(MSB)"" groestlcoin.sln /p:Configuration=R_St,Platform=x86 /v:n
+x86_R_St\dallar-qt.exe : src\dallar.cpp src\qt\res_bitcoin.cpp
+	""$(MSB)"" dallar.sln /p:Configuration=R_St,Platform=x86 /v:n
 
-x64_R_St\groestlcoin-qt.exe : src\groestlcoin.cpp src\qt\res_bitcoin.cpp
-	""$(MSB)"" groestlcoin.sln /p:Configuration=R_St,Platform=x64 /v:n
+x64_R_St\dallar-qt.exe : src\dallar.cpp src\qt\res_bitcoin.cpp
+	""$(MSB)"" dallar.sln /p:Configuration=R_St,Platform=x64 /v:n
 
 
-groestlcoin_x86.msi : groestlcoin.wxs x86_R_St\groestlcoin-qt.exe
-	candle.exe -o groestlcoin-x86.wixobj groestlcoin.wxs
-	$(WIX_LINK)  -out $@ groestlcoin-x86.wixobj
+dallar_x86.msi : dallar.wxs x86_R_St\dallar-qt.exe
+	candle.exe -o dallar-x86.wixobj dallar.wxs
+	$(WIX_LINK)  -out $@ dallar-x86.wixobj
 
-groestlcoin_x64.msi : groestlcoin.wxs x64_R_St\groestlcoin-qt.exe
-	candle.exe -arch x64 -o groestlcoin-x64.wixobj groestlcoin.wxs
-	$(WIX_LINK) -out $@ groestlcoin-x64.wixobj
+dallar_x64.msi : dallar.wxs x64_R_St\dallar-qt.exe
+	candle.exe -arch x64 -o dallar-x64.wixobj dallar.wxs
+	$(WIX_LINK) -out $@ dallar-x64.wixobj

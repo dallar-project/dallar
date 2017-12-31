@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Enviar monedas a una dirección groestlcoin</translation>
+        <translation>Enviar monedas a una dirección dallar</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and groestlcoin: URls)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and dallar: URls)</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -752,7 +752,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:
@@ -775,7 +775,7 @@
     </message>
     <message>
         <source>Dallar Core</source>
-        <translation>groestlcoin core</translation>
+        <translation>dallar core</translation>
     </message>
     <message>
         <source>Connect only to the specified node(s)</source>

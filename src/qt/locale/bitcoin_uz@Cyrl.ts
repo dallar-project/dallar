@@ -222,8 +222,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва groestlcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва dallar ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -234,7 +234,7 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
+        <source>Open a dallar: URI or payment request</source>
         <translation>Dallar’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
@@ -1216,7 +1216,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Танламалар:</translation>

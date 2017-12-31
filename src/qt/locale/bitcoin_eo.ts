@@ -222,8 +222,8 @@
         <translation>Langeto-breto</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso groestlcoin:)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso dallar:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -234,8 +234,8 @@
         <translation>Vidigi la liston de uzitaj ricevaj adresoj kaj etikedoj</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Malfermi groestlcoin:-URI-on aŭ pagpeton</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Malfermi dallar:-URI-on aŭ pagpeton</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1214,7 +1214,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Agordoj:</translation>

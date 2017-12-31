@@ -208,7 +208,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>ناکافی فنڈز</translation>

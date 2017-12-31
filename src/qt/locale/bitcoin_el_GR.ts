@@ -151,7 +151,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση groestlcoin</translation>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση dallar</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -226,8 +226,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις groestlcoin: )</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις dallar: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -238,8 +238,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Άνοιγμα groestlcoin: URI αίτησης πληρωμής</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Άνοιγμα dallar: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1411,7 +1411,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Επιλογές:</translation>

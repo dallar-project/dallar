@@ -79,9 +79,9 @@ static int AppInitRPC(int argc, char* argv[])
         std::string strUsage = strprintf(_("%s RPC client version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n";
         if (!IsArgSet("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  groestlcoin-cli [options] <command> [params]  " + strprintf(_("Send command to %s"), _(PACKAGE_NAME)) + "\n" +
-                  "  groestlcoin-cli [options] help                " + _("List commands") + "\n" +
-                  "  groestlcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  dallar-cli [options] <command> [params]  " + strprintf(_("Send command to %s"), _(PACKAGE_NAME)) + "\n" +
+                  "  dallar-cli [options] help                " + _("List commands") + "\n" +
+                  "  dallar-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

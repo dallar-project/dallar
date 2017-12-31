@@ -47,7 +47,7 @@
 #endif
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("groestlcoin:");
+const QString BITCOIN_IPC_PREFIX("dallar:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
@@ -326,7 +326,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start groestlcoin: click-to-pay handler"));
+                tr("Cannot start dallar: click-to-pay handler"));
         }
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
@@ -407,7 +407,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // groestlcoin: URI
+    if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // dallar: URI
     {
 #if QT_VERSION < 0x050000
         QUrl uri(s);

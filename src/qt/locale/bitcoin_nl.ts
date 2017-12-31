@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your Dallar addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Dallaradressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw groestlcoins verzendt.</translation>
+        <translation>Dit zijn uw Dallaradressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw dallars verzendt.</translation>
     </message>
     <message>
         <source>These are your Dallar addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -180,8 +180,8 @@
         <translation>Portemonnee versleuteld</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your groestlcoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw groestlcoins stelen.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dallars from being stolen by malware infecting your computer.</source>
+        <translation>%1 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw dallars stelen.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -398,8 +398,8 @@
         <translation>Tab-werkbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en groestlcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en dallar: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -410,8 +410,8 @@
         <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Open een groestlcoin: URI of betalingsverzoek</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Open een dallar: URI of betalingsverzoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1283,8 +1283,8 @@
         <translation>Fout bij betalingsverzoek</translation>
     </message>
     <message>
-        <source>Cannot start groestlcoin: click-to-pay handler</source>
-        <translation>Kan groestlcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start dallar: click-to-pay handler</source>
+        <translation>Kan dallar niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1987,8 +1987,8 @@
         <translation>totaal ten minste</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for groestlcoin transactions than the network can process.</source>
-        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar groestlcointransacties dan het netwerk kan verwerken.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dallar transactions than the network can process.</source>
+        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar dallartransacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2198,8 +2198,8 @@
         <translation>Verwijder deze toevoeging</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less groestlcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder groestlcoins ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dallars than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder dallars ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2222,8 +2222,8 @@
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de groestlcoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Dallarnetwerk.</translation>
+        <source>A message that was attached to the dallar: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de dallar: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Dallarnetwerk.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2267,7 +2267,7 @@
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive groestlcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dallars sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Dallars kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
@@ -2918,7 +2918,7 @@
     </message>
 </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opties:</translation>

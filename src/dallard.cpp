@@ -69,7 +69,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/groestlcoin.conf are parsed in qt/bitcoin.cpp's main()
+    // If Qt is used, parameters/dallar.conf are parsed in qt/bitcoin.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
@@ -84,7 +84,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  groestlcoind [options]                     " + strprintf(_("Start %s Daemon"), _(PACKAGE_NAME)) + "\n";
+                  "  dallard [options]                     " + strprintf(_("Start %s Daemon"), _(PACKAGE_NAME)) + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -118,12 +118,12 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "groestlcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "dallar:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in groestlcoind anymore. Use the groestlcoin-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in dallard anymore. Use the dallar-cli utility instead.\n");
             exit(EXIT_FAILURE);
         }
         // -server defaults to true for bitcoind but not for the GUI so do this here

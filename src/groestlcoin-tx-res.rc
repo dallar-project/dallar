@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Dallar"
-            VALUE "FileDescription",    "groestlcoin-tx (CLI Dallar transaction editor utility)"
+            VALUE "FileDescription",    "dallar-tx (CLI Dallar transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "groestlcoin-tx"
+            VALUE "InternalName",       "dallar-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "groestlcoin-tx.exe"
-            VALUE "ProductName",        "groestlcoin-tx"
+            VALUE "OriginalFilename",   "dallar-tx.exe"
+            VALUE "ProductName",        "dallar-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

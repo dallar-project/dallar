@@ -181,7 +181,7 @@ bool Intro::pickDataDirectory()
         /* If current default data directory does not exist, let the user choose one */
         Intro intro;
         intro.setDataDirectory(dataDir);
-        intro.setWindowIcon(QIcon(":icons/groestlcoin"));
+        intro.setWindowIcon(QIcon(":icons/dallar"));
 
         while(true)
         {
@@ -205,7 +205,7 @@ bool Intro::pickDataDirectory()
         settings.setValue("fReset", false);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the groestlcoin.conf file in the default data directory
+     * override -datadir in the dallar.conf file in the default data directory
      * (to be consistent with bitcoind behavior)
      */
     if(dataDir != getDefaultDataDirectory())

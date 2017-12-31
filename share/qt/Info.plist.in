@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>groestlcoin.icns</string>
+  <string>dallar.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.groestlcoin.Dallar-Qt</string>
+  <string>org.dallar.Dallar-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.groestlcoin.DallarPayment</string>
+      <string>org.dallar.DallarPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>groestlcoin</string>
+        <string>dallar</string>
       </array>
     </dict>
   </array>
@@ -58,7 +58,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.groestlcoin.paymentrequest</string>
+      <string>org.dallar.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Dallar payment request</string>
       <key>UTTypeConformsTo</key>
@@ -71,7 +71,7 @@
         <string>application/x-bitcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>groestlcoinpaymentrequest</string>
+          <string>dallarpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.groestlcoin.paymentrequest</string>
+        <string>org.dallar.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

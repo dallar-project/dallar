@@ -175,7 +175,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Slanje novca na groestlcoin adresu</translation>
+        <translation>Slanje novca na dallar adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -227,11 +227,11 @@
     </message>
     <message>
         <source>Sign messages with your Dallar addresses to prove you own them</source>
-        <translation>Poruku potpišemo s groestlcoin adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
+        <translation>Poruku potpišemo s dallar adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Dallar addresses</source>
-        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom groestlcoin adresom</translation>
+        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom dallar adresom</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -250,8 +250,8 @@
         <translation>Traka kartica</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Zatraži uplatu (stvara QR kod i groestlcoin: URI adresu)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Zatraži uplatu (stvara QR kod i dallar: URI adresu)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -262,8 +262,8 @@
         <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Otvori groestlcoin: URI adresu ili zahtjev za uplatu</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Otvori dallar: URI adresu ili zahtjev za uplatu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -451,7 +451,7 @@
     </message>
     <message>
         <source>The label associated with this address list entry</source>
-        <translation>Oznaka groestlcoin adrese</translation>
+        <translation>Oznaka dallar adrese</translation>
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
@@ -634,7 +634,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio groestlcoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio dallara koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1026,7 +1026,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Postavke:</translation>

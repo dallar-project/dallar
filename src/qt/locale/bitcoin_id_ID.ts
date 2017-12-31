@@ -230,8 +230,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan groestlcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan dallar: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -242,8 +242,8 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Buka URI groestlcoin: atau permintaan pembayaran</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Buka URI dallar: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1388,7 +1388,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Pilihan:</translation>

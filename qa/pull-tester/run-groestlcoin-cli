@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# This is a thin wrapper around groestlcoin-cli that strips the Windows-style EOLs
-# from the output if present. It is necessary when using groestlcoin-cli.exe on
+# This is a thin wrapper around dallar-cli that strips the Windows-style EOLs
+# from the output if present. It is necessary when using dallar-cli.exe on
 # Linux since shells will interpret the line-endings as part of the result.
 
 CURDIR=$(cd $(dirname "$0"); pwd)
 # Get BUILDDIR and REAL_BITCOIND
 
-# Grab the value of $REAL_BITCOINCLI which may be groestlcoin-cli.exe.
+# Grab the value of $REAL_BITCOINCLI which may be dallar-cli.exe.
 . "${CURDIR}/tests-config.sh"
 
 "${REAL_GROESTLCOINCLI}" "$@" | sed 's/\r//'

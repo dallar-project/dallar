@@ -18,13 +18,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Dallar"
-            VALUE "FileDescription",    "groestlcoind"
+            VALUE "FileDescription",    "dallard"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "groestlcoind"
+            VALUE "InternalName",       "dallard"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "groestlcoind.exe"
-            VALUE "ProductName",        "groestlcoind"
+            VALUE "OriginalFilename",   "dallard.exe"
+            VALUE "ProductName",        "dallard"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

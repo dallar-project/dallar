@@ -319,7 +319,7 @@
     </message>
     <message>
         <source>Send coins to a Dallar address</source>
-        <translation>Enviar moedas para um endereço groestlcoin</translation>
+        <translation>Enviar moedas para um endereço dallar</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -394,8 +394,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Solicitações de pagamentos (gera códigos QR e groestlcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Solicitações de pagamentos (gera códigos QR e dallar: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -406,8 +406,8 @@
         <translation>Mostrar a lista de endereços de recebimento usados ​​e rótulos</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Abrir um groestlcoin: URI ou cobrança</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Abrir um dallar: URI ou cobrança</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1154,7 +1154,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar groestlcoins.</translation>
+        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar dallars.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1279,8 +1279,8 @@
         <translation>Erro no pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start groestlcoin: click-to-pay handler</source>
-        <translation>Não foi possível iniciar groestlcoin: manipulador click-to-pay</translation>
+        <source>Cannot start dallar: click-to-pay handler</source>
+        <translation>Não foi possível iniciar dallar: manipulador click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1983,7 +1983,7 @@
         <translation>pelo menos</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for groestlcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dallar transactions than the network can process.</source>
         <translation>Pagando apenas a taxa mínima é bom, desde que haja pouco volume de transações. Mas esteja ciente de que isso pode acabar em uma transação nunca confirmanda uma vez que há mais demanda por transações do que a rede pode processar.</translation>
     </message>
     <message>
@@ -2202,8 +2202,8 @@
         <translation>Remover esta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less groestlcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>A taxa será deduzida da quantia que está sendo enviada. O destinatário receberá menos groestlcoins do que você colocou no campo de quantidade. Se vários destinatários estão selecionados, a taxa é dividida igualmente.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dallars than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>A taxa será deduzida da quantia que está sendo enviada. O destinatário receberá menos dallars do que você colocou no campo de quantidade. Se vários destinatários estão selecionados, a taxa é dividida igualmente.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2226,8 +2226,8 @@
         <translation>Digite um rótulo para este endereço para adicioná-lo no catálogo</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
-        <translation>A mensagem que foi anexada ao groestlcoin: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Dallar.</translation>
+        <source>A message that was attached to the dallar: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>A mensagem que foi anexada ao dallar: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Dallar.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2267,8 +2267,8 @@
         <translation>&amp;Assinar mensagem</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive groestlcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber groestlcoins enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dallars sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber dallars enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
     </message>
     <message>
         <source>The Dallar address to sign the message with</source>
@@ -2918,7 +2918,7 @@
     </message>
 </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opções:</translation>

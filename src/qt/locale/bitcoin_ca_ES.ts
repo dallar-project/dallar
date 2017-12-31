@@ -180,8 +180,8 @@
         <translation>Moneder encriptat</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your groestlcoins from being stolen by malware infecting your computer.</source>
-        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres groestlcoins no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dallars from being stolen by malware infecting your computer.</source>
+        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres dallars no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -398,8 +398,8 @@
         <translation>Barra d'eines de les pestanyes</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and groestlcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i groestlcoin: URI)</translation>
+        <source>Request payments (generates QR codes and dallar: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i dallar: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -410,8 +410,8 @@
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a groestlcoin: URI or payment request</source>
-        <translation>Obre una groestlcoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a dallar: URI or payment request</source>
+        <translation>Obre una dallar: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1275,8 +1275,8 @@
         <translation>Error de la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start groestlcoin: click-to-pay handler</source>
-        <translation>No es pot iniciar groestlcoin: controlador click-to-pay</translation>
+        <source>Cannot start dallar: click-to-pay handler</source>
+        <translation>No es pot iniciar dallar: controlador click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1883,8 +1883,8 @@
         <translation>total com a mínim</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for groestlcoin transactions than the network can process.</source>
-        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de groestlcoins que la xarxa pugui processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dallar transactions than the network can process.</source>
+        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de dallars que la xarxa pugui processar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2062,8 +2062,8 @@
         <translation>Elimina aquesta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less groestlcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys groestlcoins que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dallars than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys dallars que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2086,8 +2086,8 @@
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the groestlcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
-        <translation>Un missatge que s'ha adjuntat al groestlcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Dallar.</translation>
+        <source>A message that was attached to the dallar: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dallar network.</source>
+        <translation>Un missatge que s'ha adjuntat al dallar: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Dallar.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2119,8 +2119,8 @@
         <translation>&amp;Signa el missatge</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive groestlcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les groestlcoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dallars sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les dallars que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
         <source>The Dallar address to sign the message with</source>
@@ -2410,7 +2410,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>groestlcoin-core</name>
+    <name>dallar-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcions:</translation>
