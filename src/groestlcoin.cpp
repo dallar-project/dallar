@@ -15,6 +15,7 @@
 #include "consensus/params.h"
 #include "utilstrencodings.h"
 #include "crypto/sha256.h"
+#include "util.h"
 
 #include "bignum.h"
 
@@ -85,82 +86,6 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 //
 static const int64_t nTargetSpacing = 1 * 60; // dallar every 60 seconds
 
-//!!!BUG this function is non-deterministic  because FP-arithetics
-unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params) {
-    /* current difficulty formula, darkcoin - DarkGravity, written by Evan Duffield - evan@darkcoin.io */
-    const CBlockIndex *BlockLastSolved = pindexLast;
-    const CBlockIndex *BlockReading = pindexLast;
-    int64_t nBlockTimeAverage = 0;
-    int64_t nBlockTimeAveragePrev = 0;
-    int64_t nBlockTimeCount = 0;
-    int64_t nBlockTimeSum2 = 0;
-    int64_t nBlockTimeCount2 = 0;
-    int64_t LastBlockTime = 0;
-    int64_t PastBlocksMin = 12;
-    int64_t PastBlocksMax = 120;
-    int64_t CountBlocks = 0;
-    CBigNum PastDifficultyAverage;
-    CBigNum PastDifficultyAveragePrev;
-
-    if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || BlockLastSolved->nHeight < PastBlocksMin) {
-		return UintToArith256(params.powLimit).GetCompact();
-	}
-
-    for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++) {
-        if (PastBlocksMax > 0 && i > PastBlocksMax) { break; }
-        CountBlocks++;
-
-        if(CountBlocks <= PastBlocksMin) {
-            if (CountBlocks == 1) { PastDifficultyAverage.SetCompact(BlockReading->nBits); }
-            else { PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / CountBlocks) + PastDifficultyAveragePrev; }
-            PastDifficultyAveragePrev = PastDifficultyAverage;
-        }
-
-        if(LastBlockTime > 0){
-            int64_t Diff = (LastBlockTime - BlockReading->GetBlockTime());
-            if(Diff < 0) Diff = 0;
-            if(nBlockTimeCount <= PastBlocksMin) {
-                nBlockTimeCount++;
-
-                if (nBlockTimeCount == 1) { nBlockTimeAverage = Diff; }
-                else { nBlockTimeAverage = ((Diff - nBlockTimeAveragePrev) / nBlockTimeCount) + nBlockTimeAveragePrev; }
-                nBlockTimeAveragePrev = nBlockTimeAverage;
-            }
-            nBlockTimeCount2++;
-            nBlockTimeSum2 += Diff;
-        }
-        LastBlockTime = BlockReading->GetBlockTime();
-
-        if (BlockReading->pprev == NULL) { assert(BlockReading); break; }
-        BlockReading = BlockReading->pprev;
-    }
-
-    CBigNum bnNew(PastDifficultyAverage);
-    if (nBlockTimeCount != 0 && nBlockTimeCount2 != 0) {
-            double SmartAverage = (((nBlockTimeAverage)*0.7)+((nBlockTimeSum2 / nBlockTimeCount2)*0.3));
-            if(SmartAverage < 1) SmartAverage = 1;
-            double Shift = nTargetSpacing/SmartAverage;
-
-            int64_t nActualTimespan = (CountBlocks*nTargetSpacing)/Shift;
-            int64_t nTargetTimespan = (CountBlocks*nTargetSpacing);
-            if (nActualTimespan < nTargetTimespan/3)
-                nActualTimespan = nTargetTimespan/3;
-            if (nActualTimespan > nTargetTimespan*3)
-                nActualTimespan = nTargetTimespan*3;
-
-            // Retarget
-            bnNew *= nActualTimespan;
-            bnNew /= nTargetTimespan;
-    }
-
-    if (bnNew > CBigNum(params.powLimit)){
-        bnNew = CBigNum(params.powLimit);
-    }
-
-    return bnNew.GetCompact();
-}
-
-
 unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params) {
     /* current difficulty formula, darkcoin - DarkGravity v3, written by Evan Duffield - evan@darkcoin.io */
     const CBlockIndex *BlockLastSolved = pindexLast;
@@ -174,6 +99,7 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
     CBigNum PastDifficultyAveragePrev;
 
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || BlockLastSolved->nHeight < PastBlocksMin) {
+		LogPrintf("Diff: %s", params.powLimit.GetHex());
 		return UintToArith256(params.powLimit).GetCompact();
     }
 
@@ -190,7 +116,7 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
         if(LastBlockTime > 0){
             int64_t Diff = (LastBlockTime - BlockReading->GetBlockTime());
 			// When making a new blockchain, if we're not careful, we can skyrocket difficulty
-			if (BlockReading->nHeight <= PastBlocksMin && Diff < 60)
+			if (BlockReading->nHeight < PastBlocksMin && Diff < 60)
 			{
 				Diff = 60;
 			}
@@ -218,7 +144,9 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
 	if (bnNew > CBigNum(params.powLimit)) {
 		bnNew = CBigNum(params.powLimit);
 	}
-	strprintf("Next block difficulty adjustment: %s", (bnNew - CBigNum(params.powLimit)).GetHex());
+
+	
+	LogPrintf("PastDiffAvg: %s, TargetTime: %dll, ActualTime: %dll, LastDiff: %s, New Diff %s", PastDifficultyAverage.GetHex(), nTargetTimespan, nActualTimespan, CBigNum().SetCompact(BlockReading->nBits).GetHex(), bnNew.GetHex());
     return bnNew.GetCompact();
 }
 
@@ -308,9 +236,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 			return UintToArith256(params.powLimit).GetCompact();
     }  	
 
-	if (pindexLast->nHeight >= (100000 - 1))
+	if (pindexLast->nHeight < 10000) {
+		return GetOLDSCHOOLNextWorkRequired(pindexLast, pblock, params);
+	}
+	else {
 		return DarkGravityWave3(pindexLast, pblock, params);
-    return DarkGravityWave(pindexLast, pblock, params);
+	}
+	
 }
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward) {
