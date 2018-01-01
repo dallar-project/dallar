@@ -312,7 +312,7 @@ public:
 
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 		consensus.nMinimumChainWork = uint256S("0x00");
-        consensus.nPowTargetTimespan = 14 * 24 * 60 * 60;
+        consensus.nPowTargetTimespan = 5 * 60;
         consensus.nPowTargetSpacing = 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
 		consensus.fPowNoRetargeting = false;

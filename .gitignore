@@ -163,3 +163,5 @@ src/dallard
 src/dallar-tx
 
 src/qt/groestlcoin-qt
+
+msvc/Dallar\.VC\.db
