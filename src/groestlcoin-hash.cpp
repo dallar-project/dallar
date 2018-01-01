@@ -38,7 +38,7 @@ uint256 HashDallar(const ConstBuf& cbuf) {
 	sph_groestl512(&ctx_gr[2], static_cast<const void*>(&hash[2]), 64);
 	sph_groestl512_close(&ctx_gr[2], static_cast<void*>(&hash[4]));
 
-    return hash[2];
+    return hash[4];
 }
 
 uint256 HashFromTx(const ConstBuf& cbuf) {
