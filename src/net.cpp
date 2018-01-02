@@ -2715,3 +2715,4 @@ uint64_t CConnman::CalculateKeyedNetGroup(const CAddress& ad)
 
     return GetDeterministicRandomizer(RANDOMIZER_ID_NETGROUP).Write(&vchNetGroup[0], vchNetGroup.size()).Finalize();
 }
+
