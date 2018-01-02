@@ -271,7 +271,21 @@ def copyFramework(framework, path, verbose):
     
     if not os.path.exists(toDir):
         os.makedirs(toDir)
-    
+
+    # Boost_system is being retarded on osx
+    if toPath.endswith("boost_system.dylib"):
+        print('dumb fixing')
+        toPathBoostFix = toPath.replace('boost_system.dylib', 'boost_system-mt.dylib')
+        shutil.copy2(fromPath, toPathBoostFix)
+
+        permissions = os.stat(toPathBoostFix)
+        if not permissions.st_mode & stat.S_IWRITE:
+            os.chmod(toPathBoostFix, permissions.st_mode | stat.S_IWRITE)
+
+        if verbose >= 3:
+            print("Copied:", fromPath)
+            print(" to:", toPath)
+
     shutil.copy2(fromPath, toPath)
     if verbose >= 3:
         print("Copied:", fromPath)

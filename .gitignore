@@ -165,3 +165,9 @@ src/dallar-tx
 src/qt/groestlcoin-qt
 
 msvc/Dallar\.VC\.db
+
+background\.tiff
+
+background\.tiff\.png
+
+background\.tiff@2x\.png
