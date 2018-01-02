@@ -350,6 +350,8 @@ public:
 		assert(consensus.hashGenesisBlock == uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586"));
 		assert(genesis.hashMerkleRoot == uint256S("0x8990fd06a59713876f22148b8086e9e9858e28fa87ca2ba7c3d4e1e46ef76c73"));
 
+		//consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000009e6115a9f");
+
         vSeeds.push_back(CDNSSeedData("dnsseed.dallar.org", "dnsseed.dallar.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,30);
@@ -371,10 +373,12 @@ public:
 #endif
             {
                 {0, uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586")},
+				//{25, uint256S("0x0000001912d0168bc95b7db57ad94c7a2224c55e7c31eb5eb969a50ed09ced22") },
+				//{50, uint256S("0x00000000295d38efca35894d010f059b22bb424bcc41051503ee3be833122536") },
             },
-            1440000002,
+			1514351105,
             0,
-            10
+            4
         };
     }
 };
