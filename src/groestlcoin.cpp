@@ -373,8 +373,8 @@ public:
 #endif
             {
                 {0, uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586")},
-				//{25, uint256S("0x0000001912d0168bc95b7db57ad94c7a2224c55e7c31eb5eb969a50ed09ced22") },
-				//{50, uint256S("0x00000000295d38efca35894d010f059b22bb424bcc41051503ee3be833122536") },
+				{3, uint256S("0x00000feb89ffc4366cd024f8fc2c71b23daa6deea7bd8cccc0c3261c7a823154") },
+				{15, uint256S("0x0000007db54c02d2315f101ea271700d19bd970a63988c6ace4cbe63580ca557") },
             },
 			1514351105,
             0,
