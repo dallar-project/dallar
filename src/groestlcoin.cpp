@@ -349,8 +349,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 		assert(consensus.hashGenesisBlock == uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586"));
 		assert(genesis.hashMerkleRoot == uint256S("0x8990fd06a59713876f22148b8086e9e9858e28fa87ca2ba7c3d4e1e46ef76c73"));
-
-		//consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000009e6115a9f");
+		consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000038d455c8a");
 
         vSeeds.push_back(CDNSSeedData("dnsseed.dallar.org", "dnsseed.dallar.org"));
 
@@ -375,6 +374,7 @@ public:
                 {0, uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586")},
 				{3, uint256S("0x00000feb89ffc4366cd024f8fc2c71b23daa6deea7bd8cccc0c3261c7a823154") },
 				{15, uint256S("0x0000007db54c02d2315f101ea271700d19bd970a63988c6ace4cbe63580ca557") },
+				{45, uint256S("0x000000009d1c1b094b820511bce6f6a0f6f4bd01906834be86c5411de980c64f") },
             },
 			1514351105,
             0,
