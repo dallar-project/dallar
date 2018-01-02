@@ -98,8 +98,8 @@ void OptionsModel::Init(bool resetSettings)
     if (!SoftSetArg("-par", settings.value("nThreadsScriptVerif").toString().toStdString()))
         addOverriddenOption("-par");
 
-    if (!settings.contains("strDataDir"))
-        settings.setValue("strDataDir", Intro::getDefaultDataDirectory());
+    if (!settings.contains("strDataDir2"))
+        settings.setValue("strDataDir2", Intro::getDefaultDataDirectory());
 
     // Wallet
 #ifdef ENABLE_WALLET
@@ -155,13 +155,13 @@ void OptionsModel::Reset()
 
     // Save the strDataDir setting
     QString dataDir = Intro::getDefaultDataDirectory();
-    dataDir = settings.value("strDataDir", dataDir).toString();
+    dataDir = settings.value("strDataDir2", dataDir).toString();
 
     // Remove all entries from our QSettings object
     settings.clear();
 
     // Set strDataDir
-    settings.setValue("strDataDir", dataDir);
+    settings.setValue("strDataDir2", dataDir);
 
     // Set that this was reset
     settings.setValue("fReset", true);

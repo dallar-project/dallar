@@ -174,7 +174,7 @@ bool Intro::pickDataDirectory()
     /* 1) Default data directory for operating system */
     QString dataDir = getDefaultDataDirectory();
     /* 2) Allow QSettings to override default dir */
-    dataDir = settings.value("strDataDir", dataDir).toString();
+    dataDir = settings.value("strDataDir2", dataDir).toString();
 
     if(!fs::exists(GUIUtil::qstringToBoostPath(dataDir)) || GetBoolArg("-choosedatadir", DEFAULT_CHOOSE_DATADIR) || settings.value("fReset", false).toBool() || GetBoolArg("-resetguisettings", false))
     {
@@ -201,7 +201,7 @@ bool Intro::pickDataDirectory()
             }
         }
 
-        settings.setValue("strDataDir", dataDir);
+        settings.setValue("strDataDir2", dataDir);
         settings.setValue("fReset", false);
     }
     /* Only override -datadir if different from the default, to make it possible to
