@@ -1,34 +1,21 @@
-Dallar integration/staging tree
+Dallar Wallet Core Codebase
 =================================
-Forked from Bitcoin reference wallet 0.8.6
 
-Updated to Bitcoin reference wallet 0.11.0 on August 2015
+Dallar Core is forked from Groestlcoin's Core, because we had to start somewhere.
 
-Updated to Bitcoin reference wallet 0.13.3 on January 2017
+Only major changes are related to the chain parameters and a new MSVC build toolchain.
 
-Dallar Core Wallet
+This codebase hasn't been cleaned up since the fork yet, so there are references to Bitcoin/Groestlcoin/other coins when there shouldn't be, just as there are references to Dallar where there should be Bitcoin/Groestlcoin references, mainly in regards to copyright.
 
-http://www.dallar.org
+Build instructions are also behind and lacking.
 
-The algorithm was written as a candidate for sha3
+Fixing these issues up will be a priority once more Dallar systems are stable.
 
-https://bitcointalk.org/index.php?topic=525926.0
-
-Copyright (c) 2009-2017 The Bitcoin Core Developers
-
-Copyright (c) 2014-2017 The Dallar Core Developers
 
 What is Dallar?
 -----------------
 
-Dallar is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Dallar uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Dallar Core is the name of open source
-software which enables the use of this currency.
-
-For more information, as well as an immediately useable, binary version of
-the Dallar Core software, see http://www.dallar.org/download.
+Its Dallar.
 
 License
 -------
@@ -39,47 +26,12 @@ information or see http://opensource.org/licenses/MIT.
 Development Process
 -------------------
 
-Developers work in their own trees, then submit pull requests when they think
-their feature or bug fix is ready.
-
-If it is a simple/trivial/non-controversial change, then one of the Dallar
-development team members simply pulls it.
-
-If it is a *more complicated or potentially controversial* change, then the patch
-submitter will be asked to start a discussion
-
-The patch will be accepted if there is broad consensus that it is a good thing.
-Developers should expect to rework and resubmit patches if the code doesn't
-match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or are
-controversial.
-
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/dallar/dallar/tags) are created
-regularly to indicate new official, stable release versions of Dallar.
+@TODO
 
 Testing
 -------
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test. Please be patient and help out, and
-remember this is a security-critical project where any mistake might cost people
-lots of money.
-
-### Automated Testing
-
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
-
-Every pull request is built for both Windows and Linux on a dedicated server,
-and unit and sanity tests are automatically run. The binaries produced may be
-used for manual QA testing
-
-### Manual Quality Assurance (QA) Testing
-
-Large changes should have a test plan, and should be tested by somebody other
-than the developer who wrote the code.
+@TODO
 
 Development tips and tricks
 ---------------------------
@@ -100,7 +52,7 @@ on all categories (and give you a very large debug.log file).
 The Qt code routes qDebug() output to debug.log under category "qt": run with -debug=qt
 to see it.
 
-**testnet and regtest modes**
+**testnet and regtest modes** @TODO
 
 Run with the -testnet option to run with "play dallars" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
