@@ -30,10 +30,6 @@ extern "C" FILE * __cdecl __iob_func(void) { return _iob; }
 #pragma comment(lib, "imm32")
 #pragma comment(lib, "winmm")
 
-#ifdef USE_UPNP
-#pragma comment(lib, "miniupnpc")
-#endif
-
 #ifdef USE_QT
 
 #include <QtPlugin>

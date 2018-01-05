@@ -22,7 +22,7 @@
     <ProjectGuid>{8A7AD62E-70FB-4D20-A49B-C80A3684BA57}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>dallar-cli</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>dallar-qt</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -35,7 +35,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -162,18 +162,19 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NOMINMAX;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CONSOLE;ENABLE_WALLET;USE_QT;MINIUPNP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\miniupnpc\include;C:\OpenSSL-Win64\include;$(SolutionDir)..\src\univalue\include;$(SolutionDir)..\;$(SolutionDir)..\src;$(SolutionDir)..\src/config;$(SolutionDir)..\src\db-4.8.30\build_windows;%(AdditionalIncludeDirectories);$(QT_Path);$(QT_Path)/include/QtWidgets;$(QT_Path)/include/QtCore;$(QT_Path)/include/;$(QT_Path)/include/QtGui;$(QT_Path)/include/QtNetwork</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\github\dallar\msvc\miniupnpc;C:\OpenSSL-Win64\include;$(SolutionDir)..\src\univalue\include;$(SolutionDir)..\;$(SolutionDir)..\src;$(SolutionDir)..\src/config;$(SolutionDir)..\src\db-4.8.30\build_windows;%(AdditionalIncludeDirectories);$(QT_Path);$(QT_Path)/include/QtWidgets;$(QT_Path)/include/QtCore;$(QT_Path)/include/;$(QT_Path)/include/QtGui;$(QT_Path)/include/QtNetwork</AdditionalIncludeDirectories>
       <TreatSpecificWarningsAsErrors>4717</TreatSpecificWarningsAsErrors>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\miniupnpc\lib;C:\OpenSSL-Win64\lib\VC\static;$(QT_PATH)/lib;D:\github\dallar\x64_Release;$(QT_PATH)/plugins/platforms;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>D:\github\dallar\msvc\miniupnpc\msvc\x64\Release;C:\OpenSSL-Win64\lib\VC\static;$(QT_PATH)/lib;D:\github\dallar\x64_Release;$(QT_PATH)/plugins/platforms;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>miniupnpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

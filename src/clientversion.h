@@ -10,11 +10,11 @@
 #define UCFG_GRS_FAST 1	//!!!T
 
 #define CLIENT_VERSION_MAJOR 1
-#define CLIENT_VERSION_MINOR 0
+#define CLIENT_VERSION_MINOR 1
 #define CLIENT_VERSION_REVISION 0
 #define CLIENT_VERSION_BUILD 0
 
-#define BUILD_DESC "v1.0.0"
+#define BUILD_DESC "v1.1.0"
 
 #define COPYRIGHT_HOLDERS "The %s developers"
 #define COPYRIGHT_HOLDERS_FINAL "The Dallar Core developers"
@@ -36,9 +36,9 @@
 #endif
 
 #define PACKAGE_NAME "Dallar Core"
-#define PACKAGE_STRING "Dallar Core 1.0.0"
+#define PACKAGE_STRING "Dallar Core 1.1.0"
 #define PACKAGE_URL "www.dallar.org"
-#define PACKAGE_VERSION "1.0.0"
+#define PACKAGE_VERSION "1.1.0"
 
 #ifdef _MSC_VER
 #pragma warning(disable: 4005 4503 4018 4101 4146 4242 4244 4267 4290 4334 4717 4789 4800 4804)

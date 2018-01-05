@@ -12,17 +12,17 @@
 #define BOOST_ASIO_ERROR_CATEGORY_NOEXCEPT noexcept
 #define QT_STATIC
 #define QT_QPA_PLATFORM_WINDOWS
-#define MINIUNP_STATICLIB
 #define ENABLE_WALLET
 #define USE_QRCODE
-//#define USE_UPNP 1
 #define ENABLE_ZMQ 1
 
-#ifdef _DEBUG
-//#pragma comment(lib, "libboost_filesystem-vc140-mt-sgd-1_64")
-#else
-//#pragma comment(lib, "libboost_filesystem-vc140-mt-s-1_64")
-#endif
+#define USE_UPNP 1
+#define MINIUNP_STATICLIB 1
+#define HAVE_MINIUPNPC_MINIUPNPC_H 1
+#define HAVE_MINIUPNPC_MINIWGET_H 1
+#define HAVE_MINIUPNPC_UPNPCOMMANDS_H 1
+#define HAVE_MINIUPNPC_UPNPERRORS_H 1
+
 
 #if _MSC_VER < 1400   // removed in VS8
 #pragma warning(disable: 4270)

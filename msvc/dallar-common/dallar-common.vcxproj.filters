@@ -683,5 +683,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="..\miniupnpc\msvc\miniupnpc.vcxproj" />
   </ItemGroup>
 </Project>

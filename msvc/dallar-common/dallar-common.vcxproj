@@ -22,7 +22,7 @@
     <ProjectGuid>{8EFFD767-7623-4556-9A30-36533462915E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>dallar</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <ProjectName>dallar-common</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -35,7 +35,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -158,12 +158,13 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NOMINMAX;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CONSOLE;MINIUPNP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\miniupnpc\include;$(SolutionDir)..\src\univalue\include;$(SolutionDir)..\;$(SolutionDir)..\src;$(SolutionDir)..\src/config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\github\dallar\msvc;$(SolutionDir)..\src\univalue\include;$(SolutionDir)..\;$(SolutionDir)..\src;$(SolutionDir)..\src/config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <TreatSpecificWarningsAsErrors>4717</TreatSpecificWarningsAsErrors>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -174,8 +175,10 @@
     <Lib>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files\miniupnpc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -401,6 +404,7 @@
     <ClInclude Include="..\..\src\zmq\zmqpublishnotifier.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\miniupnpc\msvc\miniupnpc.vcxproj" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

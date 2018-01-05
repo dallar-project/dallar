@@ -110,9 +110,9 @@ void OptionsModel::Init(bool resetSettings)
 #endif
 
     // Network
-    if (!settings.contains("fUseUPnP"))
-        settings.setValue("fUseUPnP", DEFAULT_UPNP);
-    if (!SoftSetBoolArg("-upnp", settings.value("fUseUPnP").toBool()))
+    if (!settings.contains("fUseUPnP2"))
+        settings.setValue("fUseUPnP2", DEFAULT_UPNP);
+    if (!SoftSetBoolArg("-upnp", settings.value("fUseUPnP2").toBool()))
         addOverriddenOption("-upnp");
 
     if (!settings.contains("fListen"))
@@ -192,7 +192,7 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return fMinimizeToTray;
         case MapPortUPnP:
 #ifdef USE_UPNP
-            return settings.value("fUseUPnP");
+            return settings.value("fUseUPnP2");
 #else
             return false;
 #endif
@@ -274,7 +274,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("fMinimizeToTray", fMinimizeToTray);
             break;
         case MapPortUPnP: // core option - can be changed on-the-fly
-            settings.setValue("fUseUPnP", value.toBool());
+            settings.setValue("fUseUPnP2", value.toBool());
             MapPort(value.toBool());
             break;
         case MinimizeOnClose:

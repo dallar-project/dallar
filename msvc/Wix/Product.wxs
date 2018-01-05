@@ -1,0 +1,112 @@
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi' xmlns:netfx='http://schemas.microsoft.com/wix/NetFxExtension'>
+
+
+  <?define UpgradeCode="76e20a21-ea63-4ac5-9729-05f8e607c45d"?>
+  <?define PRODVER="1.0.0"?>
+
+  <?if $(sys.BUILDARCH) = x64 ?>
+  <?define OUTDIR="x64"?>
+  <?else ?>
+  <?define OUTDIR="x86"?>
+  <?endif ?>
+
+  <Product Name='Dallar Core' Id='*' UpgradeCode='$(var.UpgradeCode)' Version='$(var.PRODVER)' Manufacturer='Dallar' Language='1033' >
+    <Package Id='*' Keywords='Installer' Description="Dallar Core" Comments='Dallar Core' Manufacturer='Dallar' InstallerVersion='301' Compressed='yes'  />
+
+    <UIRef Id="WixUI_InstallDir" />
+
+
+    <Upgrade Id='$(var.UpgradeCode)'>
+      <UpgradeVersion OnlyDetect="yes" Minimum="$(var.PRODVER)" Property="NEWERVERSIONDETECTED" IncludeMinimum="no" />
+      <UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
+    </Upgrade>
+
+    <Icon Id="Dallar.ico" SourceFile="src\qt\res\icons\dallar.ico " />
+
+    <Property Id="ARPPRODUCTICON" Value="Dallar.ico" />
+    <Property Id='DiskPrompt' Value="Dallar Core" />
+    <Property Id="ARPHELPLINK" Value="http://www.dallar.org/" />
+    <Property Id="ARPURLINFOABOUT" Value="http://www.dallar.org/" />
+    <Property Id="ARPURLUPDATEINFO" Value="http://www.dallar.org/" />
+    <Property Id="LAUNCHPRODUCT">0</Property>
+    <Property Id="ARPNOREPAIR" Value="1" />
+    <!--    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />-->
+
+    <Property Id="INSTALLDIR">
+      <RegistrySearch Id="FindInstallLocation" Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[OLDERVERSIONBEINGUPGRADED]" Name="InstallLocation" Type="raw" />
+    </Property>
+
+
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <?if $(sys.BUILDARCH) = x64 ?>
+      <Directory Id='ProgramFiles64Folder' Name='PFiles'>
+        <Directory Id='INSTALLDIR' Name='Dallar'>
+          <Directory Id='DAEMON' Name='daemon' />
+        </Directory>
+      </Directory>
+      <?else ?>
+      <Directory Id='ProgramFilesFolder' Name='PFiles'>
+        <Directory Id='INSTALLDIR' Name='Dallar'>
+          <Directory Id='DAEMON' Name='daemon' />
+        </Directory>
+      </Directory>
+      <?endif ?>
+
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Dallar Core"/>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+
+    <Media Id="1" Cabinet="dallar.cab" EmbedCab="yes"/>
+
+    <Component Id='CMP_GrsQt' Guid='a677466c-3dbe-476f-a225-eb19da78004d' Directory='INSTALLDIR' >
+      <File  Id="dallar_qt.exe" Source="$(var.OUTDIR)\dallar-qt.exe"    KeyPath='yes'       >
+        <!--            <Shortcut Id="startmenuDallar"     Directory="ProgramMenuFolder"   Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" /> -->
+        <Shortcut Id="desktopDallar"   Directory="DesktopFolder"       Name="Dallar Core" Icon="Dallar.ico" IconIndex="0" Advertise="yes" />
+      </File>
+      <Shortcut Id='UninstallProductFromInstallDir'     Name='Uninstall Dallar Core' Description='Uninstalls Dallar Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
+    </Component>
+
+    <Component Id='CMP_GrsDaemon' Guid='32b21315-0f58-4af8-8f14-156645ecfad6' Directory='DAEMON' >
+      <File  Source="$(var.OUTDIR)\dallard.exe"  KeyPath='yes'       />
+      <File  Source="$(var.OUTDIR)\dallar-cli.exe"           />
+    </Component>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id='CMP_ApplicationShortcut' Guid='ed335276-6250-4832-98b3-3694ff8beaee'>
+        <Shortcut Id="startmenuDallar" Name="Dallar Core" Target="[#dallar_qt.exe]" Icon="Dallar.ico" IconIndex="0" Advertise="no" />
+        <Shortcut Id='UninstallProduct'     Name='Uninstall Dallar Core' Description='Uninstalls Dallar Core' Target='[System64Folder]msiexec.exe' Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Dallar" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <CustomAction Id="NewerVersionDetected" Error="There is a later version of this product installed"/>
+    <CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+    <CustomAction Id='LaunchFile' FileKey='dallar_qt.exe' ExeCommand='' Return="asyncNoWait" />
+
+    <InstallUISequence>
+      <AppSearch After="FindRelatedProducts"/>
+    </InstallUISequence>
+
+    <InstallExecuteSequence>
+      <Custom Action="NewerVersionDetected" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
+      <RemoveExistingProducts After="InstallInitialize" />
+      <InstallFiles/>
+      <Custom Action="SetARPINSTALLLOCATION" After="InstallValidate"></Custom>
+      <SelfRegModules/>
+      <!--        <Custom Action='LaunchFile' After='InstallFinalize'>LAUNCHPRODUCT</Custom>  -->
+    </InstallExecuteSequence>
+
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+
+    <Feature Id='Complete' Level='1' Title='Dallar Core'>
+      <ComponentRef Id='CMP_GrsQt'				/>
+      <ComponentRef Id='CMP_GrsDaemon'			/>
+      <ComponentRef Id='CMP_ApplicationShortcut'	/>
+    </Feature>
+
+  </Product>
+</Wix>
