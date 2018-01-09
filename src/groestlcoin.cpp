@@ -349,7 +349,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 		assert(consensus.hashGenesisBlock == uint256S("0x000005942766af8f99efd3b13fdf5be9ef43981273430f593c669cd1bfe4f586"));
 		assert(genesis.hashMerkleRoot == uint256S("0x8990fd06a59713876f22148b8086e9e9858e28fa87ca2ba7c3d4e1e46ef76c73"));
-		consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000038d455c8a");
+		consensus.nMinimumChainWork = uint256S("00000000000000000000000000000000000000000000000000014c8c51de9cb3");
 
         vSeeds.push_back(CDNSSeedData("dnsseed.dallar.org", "dnsseed.dallar.org"));
 
@@ -380,11 +380,12 @@ public:
 				{1000, uint256S("0x0000000004f74a7a9908d40600e166971df3d06ba2ef1a4817438e95a20bb997") },
 				{2000, uint256S("0x00000000011fe91da696da44890a0e1e6d17760ef9a578b25df662e35138d2ad") },
 				{3000, uint256S("0x00000000046a359c49301555c45d7cea227af794412a8a257ca9e29069fb2047") },
-				{3550, uint256S("0x00000000121ddfcd0cdc5fd5763b56aa3f167f1b41286587e427aab7e8389fad") },
+				{3500, uint256S("0x00000000121ddfcd0cdc5fd5763b56aa3f167f1b41286587e427aab7e8389fad") },
+				{7500, uint256S("0x000000000e6d8c2872864748085dad49dfab200fba42d0f348bbd934158010d0") }
             },
-			1515129897,
-            3600,
-            0.03
+			1515461571,
+            9000,
+            0.05
         };
     }
 };
