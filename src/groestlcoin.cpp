@@ -236,12 +236,12 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 			return UintToArith256(params.powLimit).GetCompact();
     }  	
 
-	if (pindexLast->nHeight < 10000) {
-		return GetOLDSCHOOLNextWorkRequired(pindexLast, pblock, params);
-	}
-	else {
-		return DarkGravityWave3(pindexLast, pblock, params);
-	}
+	//if (pindexLast->nHeight < 10000) {
+	return GetOLDSCHOOLNextWorkRequired(pindexLast, pblock, params);
+	//}
+	//else {
+	//	return DarkGravityWave3(pindexLast, pblock, params);
+	//}
 	
 }
 
