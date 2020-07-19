@@ -1139,6 +1139,12 @@ bool IsInitialBlockDownload()
         return true;
     if (chainActive.Tip()->nChainWork < UintToArith256(chainParams.GetConsensus().nMinimumChainWork))
         return true;
+	
+    if (IsArgSet("-forceNotInitialDownload")) {
+        latchToFalse.store(true, std::memory_order_relaxed);
+        return false;
+    }
+	
     if (chainActive.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge))
         return true;
     latchToFalse.store(true, std::memory_order_relaxed);
